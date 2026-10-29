@@ -1,0 +1,49 @@
+site_name: FIER's Algodex
+site_url: https://Fabian-dotcom.github.io/fiers-algodex/
+repo_url: https://github.com/Fabian-dotcom/fiers-algodex
+repo_name: fiers-algodex
+
+theme:
+  name: material
+  palette:
+    # Helles Theme (Standard)
+    - scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: In den dunklen Modus wechseln
+    # Dunkles Theme
+    - scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: In den hellen Modus wechseln
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Startseite: index.md
+  - Glossar:
+      - Adjazenzliste: glossary/adjazenzliste.md
+  - Lösungen:
+      - LeetCode 2791: solutions/leetcode-2791.md
