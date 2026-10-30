@@ -9,10 +9,11 @@ tags:
   - Hard
 ---
 
+
 # LeetCode 2791: Count Paths That Can Form a Palindrome in a Tree
 
 - **Schwierigkeit:** Hard
-- **Themen:** Tree, Graph, DFS, Bit Manipulation, Hash Map, Prefix XOR
+- **Themen:** Tree, Graph, DFS, Bit Manipulation, [Hash Map](../glossary/hash-map.md), Prefix XOR
 - **Verwandte Konzepte:** [Adjazenzliste](../glossary/adjazenzliste.md)
 
 ---
@@ -64,7 +65,7 @@ graph TD
 > **Schlüsselerkenntnis:** Die Kanten von `Root` bis `LCA` werden auf beiden Pfaden durchlaufen. Im XOR-Produkt heben sie sich auf:
 > $$\text{mask}(\text{Root} \to u) \oplus \text{mask}(\text{Root} \to v) = \text{mask}(u \to v)$$
 
-Damit der Pfad zwischen $u$ und $v$ ein Palindrom bilden kann, muss für die Bitmasken gelten:
+Damit der Pfad zwischen $u$ und $v$ ein Palindrom bilden kann, muss für die [Bitmasken](../glossary/bit-manipulation.md) gelten:
 $$\text{mask}(u) \oplus \text{mask}(v) \in \{0, 2^0, 2^1, \dots, 2^{25}\}$$
 
 Das entspricht genau zwei Fällen:
@@ -75,7 +76,7 @@ Das entspricht genau zwei Fällen:
 
 ## Implementierung (Python)
 
-Wir bauen den Baum als [Adjazenzliste](../glossary/adjazenzliste.md) auf, ermitteln per Tiefensuche (DFS) für jeden Knoten seine Bitmaske bezüglich der Wurzel und zählen passende Paare über eine Hash Map (Frequenz-Zähler) analog zum 2-Sum-Prinzip.
+Wir bauen den Baum als [Adjazenzliste](../glossary/adjazenzliste.md) auf, ermitteln per [[Tiefensuche](../glossary/traversierung-bfs-dfs.md) (DFS)](../glossary/traversierung-bfs-dfs.md) für jeden Knoten seine [Bitmaske](../glossary/bit-manipulation.md) bezüglich der Wurzel und zählen passende Paare über eine [Hash Map](../glossary/hash-map.md) (Frequenz-Zähler) analog zum 2-Sum-Prinzip.
 
 ```python
 from collections import Counter
@@ -128,7 +129,7 @@ class Solution:
 | Dimension | Komplexität | Erklärung |
 | :--- | :--- | :--- |
 | **Zeitkomplexität** | $\mathcal{O}(26 \cdot n) = \mathcal{O}(n)$ | Baumaufbau $\mathcal{O}(n)$, DFS $\mathcal{O}(n)$, Zählen der Paare benötigt für jeden Knoten 26 Bit-Checks $\rightarrow \mathcal{O}(26n)$. |
-| **Speicherkomplexität** | $\mathcal{O}(n)$ | Adjazenzliste $\mathcal{O}(n)$, Rekursionsstapel $\mathcal{O}(n)$ im Worst-Case (entarteter Baum), Counter & Mask-Array $\mathcal{O}(n)$. |
+| **Speicherkomplexität** | $\mathcal{O}(n)$ | [Adjazenzliste](../glossary/adjazenzliste.md) $\mathcal{O}(n)$, Rekursionsstapel $\mathcal{O}(n)$ im Worst-Case (entarteter Baum), Counter & Mask-Array $\mathcal{O}(n)$. |
 
 ---
 
