@@ -54,3 +54,5 @@ Bäume sind zusammenhängende, kreisfreie Graphen mit $n$ Knoten und $n - 1$ Kan
 
 - [LeetCode 2791: Count Paths That Can Form a Palindrome in a Tree](../solutions/leetcode-2791.md) (Hard)
   - *Kombination aus [Adjazenzliste](../glossary/adjazenzliste.md) + DFS + Prefix-XOR + 26-Bit-Maske.*
+- [LeetCode 3970: Shortest Path With At Most K Consecutive Identical Characters](../solutions/leetcode-3970.md) (Hard)
+  - *Zustandsbasierter Dijkstra mit State-Space Expansion `(u, last_char, count)` und Min-Heap.*

@@ -4,7 +4,6 @@ tags:
   - Home
 ---
 
-
 # FIER's Algodex
 
 Willkommen im **Algodex**! Hier sammle, strukturiere und dokumentiere ich Algorithmen, Datenstrukturen und gelöste Programmieraufgaben – verständlich, praxisnah und in meinen eigenen Worten aufbereitet.
@@ -13,15 +12,23 @@ Willkommen im **Algodex**! Hier sammle, strukturiere und dokumentiere ich Algori
 
 ## Bereiche
 
-- **[Lernpfade](roadmaps/graphs.md):** Strukturierte Themenwege vom Einstieg bis zu fortgeschrittenen Techniken (z. B. Graphen & Bäume).
+- **Lernpfade:** Strukturierte Themenwege vom Einstieg bis zu fortgeschrittenen Techniken:
+    - [Graphen & Bäume](roadmaps/graphs.md) – Repräsentation, Traversierung, Kürzeste Pfade, Euler-Tour und LCA.
+    - [Arrays, Strings & Sequenz-Muster](roadmaps/arrays-strings.md) – Two Pointers, Sliding Window, Sweep-Line und Binäre Suche.
+    - [Dynamische Programmierung (DP)](roadmaps/dynamic-programming.md) – Memoization, Tabulation, Knapsack und Zustandsräume.
+    - [Mathematik & Bit-Manipulation](roadmaps/math-bit-manipulation.md) – Bitmasken, XOR-Tricks, Zahlenspiegelung und Kalenderarithmetik.
 - **[Glossar](glossary/adjazenzliste.md):** Wichtige informatische Grundbegriffe, Datenstrukturen und Entwurfsmuster einfach und prägnant erklärt:
     - [Adjazenzliste](glossary/adjazenzliste.md) – Grundbaustein für Graphen und Bäume.
     - [Adjazenzmatrix](glossary/adjazenzmatrix.md) – Quadratische Matrix für dichte Graphen und schnelle Kantenexistenz-Checks.
-    - [CSR-Format](glossary/csr-format.md) – Flache, cache-optimierte 1D-Arrays ([Compressed Sparse Row](glossary/csr-format.md)) zur Minimierung des Speicher-Overheads.
-    - [Zustandsbasierter Dijkstra](glossary/state-space-dijkstra.md) – [State-Space Expansion](glossary/state-space-dijkstra.md) & [Zustandsraum-Reduktion](glossary/state-space-dijkstra.md) für Kürzeste-Pfad-Suchen mit Regeln und Historien.
-    - [Graph-Traversierung (BFS & DFS)](glossary/traversierung-bfs-dfs.md) – Breiten- und [Tiefensuche](glossary/traversierung-bfs-dfs.md), Schichten und Stack-Vermeidung.
-    - [Topologische Sortierung](glossary/topologische-sortierung.md) – [Kahn-Algorithmus](glossary/topologische-sortierung.md) und lineare Ordnung in DAGs.
-    - [Landau-Symbole (Big-O Notation)](glossary/o-notation.md) – Asymptotische Laufzeit- und Speicherkomplexität.
+    - [CSR-Format](glossary/csr-format.md) – Flache, cache-optimierte 1D-Arrays (Compressed Sparse Row).
+    - [PageRank](glossary/pagerank.md) – Random-Surfer-Modell, Dämpfungsfaktor und Power Iteration.
+    - [Graph Neural Networks (GNN)](glossary/gnn.md) – Message Passing, Node Embeddings und GPU-SpMM.
+    - [SciPy & Matrix-Vektor (SpMV)](glossary/scipy-matrix-vector.md) – Dünnbesetzte Multiplikation in O(E).
+    - [Speicher & Garbage Collection](glossary/memory-management.md) – Cache-Lokalität, Pointer-Overhead und GC-Paradigmen.
+    - [Zustandsbasierter Dijkstra](glossary/state-space-dijkstra.md) – State-Space Expansion & Zustandsraum-Reduktion.
+    - [Graph-Traversierung (BFS & DFS)](glossary/traversierung-bfs-dfs.md) – Breiten- und Tiefensuche, Schichten und Stack-Vermeidung.
+    - [Topologische Sortierung](glossary/topologische-sortierung.md) – Kahn-Algorithmus und lineare Ordnung in DAGs.
+    - [Landau-Symbole (Big-O Notation)](glossary/o-notation.md) – Asymptotische Laufzeit- und Speicherkomplexität mit interaktivem Wachstumsdiagramm.
     - [Hash Map & Hash Set](glossary/hash-map.md) – Schnelle O(1)-Lookups und Komplement-Suchen.
     - [Verkettete Liste](glossary/linked-list.md) – Zeiger-basierte lineare Strukturen und Dummy-Nodes.
     - [Schiebefenster (Sliding Window)](glossary/sliding-window.md) – Dynamische Teilstring- und Subarray-Analysen.
@@ -33,7 +40,7 @@ Willkommen im **Algodex**! Hier sammle, strukturiere und dokumentiere ich Algori
     - [Min-Heap & Sweep-Line](glossary/min-heap-sweep-line.md) – Prioritätswarteschlangen für dynamische Intervallabfragen.
     - [Zyklische Permutationen](glossary/cyclic-permutations.md) – Invarianz-Prüfung und minimale Sortierzüge.
     - [Bitweise Operationen & Bitmasken](glossary/bit-manipulation.md) – Effiziente Bit-Prüfungen und Paritäten.
-    - [Fortgeschrittene Baum-Techniken](glossary/advanced-tree-techniques.md) – [Binary Lifting](glossary/advanced-tree-techniques.md), LCA, Euler-Tour und [Fenwick-Bäume](glossary/advanced-tree-techniques.md).
+    - [Fortgeschrittene Baum-Techniken](glossary/advanced-tree-techniques.md) – Binary Lifting, LCA, Euler-Tour und Fenwick-Bäume.
 - **[Stichwort-Referenz (Keyword Index)](references.md):** Alphabetische und thematische Schnellübersicht aller Algorithmen und Konzepte.
 - **[Lösungen](solutions/leetcode-1.md):** Ausführlich dokumentierte Lösungsansätze zu Coding-Challenges inklusive Denkweise, Komplexitätsanalyse, Python-Code und Fallstricken:
     - [LeetCode 1: Two Sum](solutions/leetcode-1.md)
@@ -53,6 +60,7 @@ Willkommen im **Algodex**! Hier sammle, strukturiere und dokumentiere ich Algori
     - [LeetCode 3841: Palindromic Path Queries in a Tree](solutions/leetcode-3841.md)
     - [LeetCode 3942: Minimum Operations to Sort a Permutation](solutions/leetcode-3942.md)
     - [LeetCode 3963: Create Grid With Exactly One Path](solutions/leetcode-3963.md)
+    - [LeetCode 3970: Shortest Path With At Most K Consecutive Identical Characters](solutions/leetcode-3970.md)
 - **[Templates](templates/leetcode-template.md):** Einheitliche Vorlage für neue Dokumentationen.
 
 ---

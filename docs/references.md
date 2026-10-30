@@ -38,6 +38,10 @@ Diese Seite bietet eine strukturierte Übersicht aller Kernbegriffe, Datenstrukt
 | **Schiebefenster (Sliding Window)** | Dynamische und feste Intervalle mit Two-Pointers in $\mathcal{O}(n)$. | [Schiebefenster](glossary/sliding-window.md) |
 | **Binäre Suche (Binary Search)** | Logarithmische Suche $\mathcal{O}(\log n)$ und Partitionierung zweier sortierter Arrays. | [Binäre Suche](glossary/binary-search.md) |
 | **Sweep-Line** | Ereignispunkt-Traversierung entlang einer Achse zur Intervallverarbeitung. | [Min-Heap & Sweep-Line](glossary/min-heap-sweep-line.md) |
+| **PageRank** | Zentralitätsbewertung im gerichteten Graphen via Random Walk und Power Iteration. | [PageRank](glossary/pagerank.md) |
+| **Graph Neural Networks (GNN)** | Deep Learning auf Graphen durch Message Passing und Nachbarschafts-Aggregation. | [Graph Neural Networks](glossary/gnn.md) |
+| **SciPy & Matrix-Vektor (SpMV)** | Dünnbesetzte Multiplikationen und wissenschaftliche Datenformate (CSR, CSC, COO). | [SciPy & Matrix-Vektor](glossary/scipy-matrix-vector.md) |
+| **Speicher & Garbage Collection** | Cache-Lines, Pointer-Overhead, Referenzzählung und Stop-the-World GC. | [Speicherverwaltung & GC](glossary/memory-management.md) |
 
 ---
 
