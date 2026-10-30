@@ -36,10 +36,8 @@ Gegeben sei ein Graph mit $V$ Knoten und $E$ Kanten. CSR speichert den Graphen i
    Die Zielknoten $v$ der Kanten.
 3. **`row_ptr` bzw. `offset` (Länge $V + 1$):**  
    Zeigt für jeden Knoten $u$ an, an welchem Index in `column_indices` seine Nachbarn beginnen und wo sie enden.
-   - Die Nachbarn von Knoten $u$ liegen genau im Slice:
-     $$\text{column\_indices}[\text{row\_ptr}[u] \dots \text{row\_ptr}[u+1]]$$
-   - Der Ausgangsgrad (*Out-Degree*) von Knoten $u$ ist:
-     $$\text{deg}(u) = \text{row\_ptr}[u+1] - \text{row\_ptr}[u]$$
+   - Die Nachbarn von Knoten $u$ liegen genau im Slice `column_indices[row_ptr[u] : row_ptr[u + 1]]`.
+   - Der Ausgangsgrad (*Out-Degree*) von Knoten $u$ berechnet sich aus $\text{deg}(u) = \text{row\_ptr}[u+1] - \text{row\_ptr}[u]$.
 
 ```mermaid
 graph TD
@@ -128,6 +126,6 @@ class CSRGraph:
 
 ## Typische Einsatzgebiete
 
-1. **Statische Graphen mit hoher Knoten-/Kantenanzahl:** Wenn die Graphstruktur nach dem Einlesen unverändert bleibt und millionenfache Traversierungen stattfinden (z. B. Dijkstra, PageRank, Graph Neural Networks).
-2. **SciPy & Scientific Computing:** `scipy.sparse.csr_matrix` ist der Standard für Matrix-Vektor-Multiplikationen.
-3. **Competitive Programming mit engen Time/Memory Limits:** Vermeidung von Garbage-Collection- und Pointer-Overhead in Sprachen wie Python, C++ oder Rust.
+1. **Statische Graphen mit hoher Knoten-/Kantenanzahl:** Wenn die Graphstruktur nach dem Einlesen unverändert bleibt und millionenfache Traversierungen stattfinden (z. B. Dijkstra, [PageRank](pagerank.md), [Graph Neural Networks](gnn.md)).
+2. **SciPy & Scientific Computing:** `scipy.sparse.csr_matrix` ist der Standard für [Matrix-Vektor-Multiplikationen (SpMV)](scipy-matrix-vector.md).
+3. **Competitive Programming mit engen Time/Memory Limits:** Vermeidung von [Garbage-Collection- und Pointer-Overhead](memory-management.md) in Sprachen wie Python, Java, C++ oder Rust.

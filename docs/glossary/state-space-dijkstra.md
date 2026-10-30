@@ -57,8 +57,9 @@ graph TD
     style S3 fill:#ff9800,stroke:#fff,stroke-width:2px,color:#fff
 ```
 
-Jede Kante im Originalgraphen $(u \to v)$ wird im Zustandsgraphen zu einem Übergang zwischen zwei konkreten Zuständen:
-$$(\text{cost}, u, \text{context}) \xrightarrow{\text{Kante } w} (\text{cost} + w, v, \text{neuer\_context})$$
+Jede Kante im Originalgraphen $(u \to v)$ mit Kantengewicht $w$ wird im Zustandsgraphen zu einem Übergang zwischen zwei konkreten Zuständen:
+
+$$(\text{cost}, u, \text{context}) \xrightarrow{\quad w \quad} (\text{cost} + w, v, \text{neuer\_context})$$
 
 ---
 

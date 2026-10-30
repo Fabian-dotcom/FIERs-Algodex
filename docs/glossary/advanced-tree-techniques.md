@@ -29,9 +29,9 @@ Der $2^j$-te Vorfahre ist der $2^{j-1}$-te Vorfahre des $2^{j-1}$-ten Vorfahren.
 
 ```mermaid
 graph BT
-    U((u)) -->|2^0 = 1| V1((up[u][0]))
-    V1 -->|2^0 = 1| V2((up[u][1]))
-    U -.->|2^1 = 2| V2
+    U((u)) -->|"2^0 = 1"| V1(("up[u][0]"))
+    V1 -->|"2^0 = 1"| V2(("up[u][1]"))
+    U -.->|"2^1 = 2"| V2
 
     style U fill:#3f51b5,stroke:#fff,stroke-width:2px,color:#fff
     style V2 fill:#009688,stroke:#fff,stroke-width:2px,color:#fff
