@@ -1,12 +1,23 @@
+---
+tags:
+  - LeetCode
+  - Tree
+  - Graph
+  - DFS
+  - Bitmask
+  - Prefix XOR
+  - Hard
+---
+
 # LeetCode 2791: Count Paths That Can Form a Palindrome in a Tree
 
-- **Schwierigkeit:** Hard 🔴
+- **Schwierigkeit:** Hard
 - **Themen:** Tree, Graph, DFS, Bit Manipulation, Hash Map, Prefix XOR
 - **Verwandte Konzepte:** [Adjazenzliste](../glossary/adjazenzliste.md)
 
 ---
 
-## 📝 Aufgabenstellung
+## Aufgabenstellung
 
 Gegeben ist ein gewurzelter Baum mit $n$ Knoten (nummeriert von $0$ bis $n - 1$), dessen Wurzel der Knoten $0$ ist.
 
@@ -18,7 +29,7 @@ Gesucht ist die Anzahl der Knotenpaare $(u, v)$ mit $u < v$, sodass die Zeichen 
 
 ---
 
-## 💡 Intuition & Kernideen
+## Intuition & Kernideen
 
 ### 1. Wann lässt sich ein String zu einem Palindrom umordnen?
 Eine Zeichenkette lässt sich genau dann zu einem Palindrom anordnen, wenn:
@@ -38,6 +49,21 @@ $$\text{Pfad}(u, v) = \text{Pfad}(\text{Root}, u) \oplus \text{Pfad}(\text{Root}
 
 Die Kanten vom Wurzelknoten zum LCA liegen auf beiden Wegen und heben sich im XOR gegenseitig auf ($x \oplus x = 0$).
 
+```mermaid
+graph TD
+    R((0: Root)) -->|...| LCA((LCA))
+    LCA -->|x| U((u))
+    LCA -->|y| V((v))
+
+    style R fill:#3f51b5,stroke:#fff,stroke-width:2px,color:#fff
+    style LCA fill:#009688,stroke:#fff,stroke-width:2px,color:#fff
+    style U fill:#ff9800,stroke:#fff,stroke-width:2px,color:#fff
+    style V fill:#ff9800,stroke:#fff,stroke-width:2px,color:#fff
+```
+
+> **Schlüsselerkenntnis:** Die Kanten von `Root` bis `LCA` werden auf beiden Pfaden durchlaufen. Im XOR-Produkt heben sie sich auf:
+> $$\text{mask}(\text{Root} \to u) \oplus \text{mask}(\text{Root} \to v) = \text{mask}(u \to v)$$
+
 Damit der Pfad zwischen $u$ und $v$ ein Palindrom bilden kann, muss für die Bitmasken gelten:
 $$\text{mask}(u) \oplus \text{mask}(v) \in \{0, 2^0, 2^1, \dots, 2^{25}\}$$
 
@@ -47,7 +73,7 @@ Das entspricht genau zwei Fällen:
 
 ---
 
-## 🐍 Implementierung (Python)
+## Implementierung (Python)
 
 Wir bauen den Baum als [Adjazenzliste](../glossary/adjazenzliste.md) auf, ermitteln per Tiefensuche (DFS) für jeden Knoten seine Bitmaske bezüglich der Wurzel und zählen passende Paare über eine Hash Map (Frequenz-Zähler) analog zum 2-Sum-Prinzip.
 
@@ -97,7 +123,7 @@ class Solution:
 
 ---
 
-## 📊 Komplexitätsanalyse
+## Komplexitätsanalyse
 
 | Dimension | Komplexität | Erklärung |
 | :--- | :--- | :--- |
@@ -106,7 +132,7 @@ class Solution:
 
 ---
 
-## 💡 Alternativer One-Pass-Ansatz
+## Alternativer One-Pass-Ansatz
 
 Man kann die Paare auch direkt *während* der DFS zählen, ohne vorher alle Masken in einem Array zwischenzuspeichern:
 
@@ -142,7 +168,7 @@ class SolutionOnePass:
 
 ---
 
-## ⚠️ Edge Cases & Fallstricke
+## Edge Cases & Fallstricke
 
 1. **Rekursionslimit in Python:** Bei $n = 10^5$ und einem linearen Baum (Kette) kann Python an das Standard-Rekursionslimit (`sys.getrecursionlimit()`) stoßen. In der Praxis kann `sys.setrecursionlimit(200000)` oder eine iterative DFS (Stack) nötig sein.
 2. **Knoten 0 ignorieren:** `s[0]` hat keine eingehende Kante und muss ignoriert werden; der Index-Shift beginnt erst ab Knoten 1.

@@ -1,30 +1,46 @@
+---
+tags:
+  - Graph
+  - Data Structure
+  - Tree
+---
+
 # Adjazenzliste (Adjacency List)
 
 Die **Adjazenzliste** ist eine der wichtigsten und am häufigsten verwendeten Datenstrukturen zur Repräsentation von **Graphen** und **Bäumen** in der Informatik.
 
 ---
 
-## 💡 Intuition & Kernidee
+## Intuition & Kernidee
 
 Statt wie bei einer Matrix für jedes mögliche Knotenpaar Speicher zu reservieren, merkt sich bei einer Adjazenzliste jeder Knoten **nur die Nachbarn, mit denen er tatsächlich verbunden ist**.
 
 Man kann sich das wie ein Adressbuch vorstellen: Jeder Knoten hat seine eigene Liste an Kontakten (Kanten), die von ihm ausgehen.
 
-```
-Graph:
-(0) --- [a] ---> (1)
- |
- +---- [b] ---> (2)
+```mermaid
+graph LR
+    0((0)) -->|a| 1((1))
+    0((0)) -->|b| 2((2))
+    1((1)) -->|c| 3((3))
+    1((1)) -->|d| 4((4))
+    2((2)) -->|e| 5((5))
 
+    style 0 fill:#3f51b5,stroke:#fff,stroke-width:2px,color:#fff
+```
+
+```text
 Adjazenzliste:
 0: [(1, 'a'), (2, 'b')]
-1: []
-2: []
+1: [(3, 'c'), (4, 'd')]
+2: [(5, 'e')]
+3: []
+4: []
+5: []
 ```
 
 ---
 
-## ⚖️ Vergleich: Adjazenzliste vs. Adjazenzmatrix
+## Vergleich: Adjazenzliste vs. Adjazenzmatrix
 
 | Kriterium | Adjazenzliste | Adjazenzmatrix |
 | :--- | :--- | :--- |
@@ -37,7 +53,7 @@ Adjazenzliste:
 
 ---
 
-## 🐍 Implementierung in Python
+## Implementierung in Python
 
 In Python lässt sich eine Adjazenzliste besonders elegant mit `collections.defaultdict(list)` oder einer Liste von Listen aufbauen.
 
@@ -98,7 +114,7 @@ for child in range(1, n):
 
 ---
 
-## 🔍 Typische Anwendungsfälle
+## Typische Anwendungsfälle
 
 - **Tiefensuche (DFS)** und **Breitensuche (BFS)** (z. B. Zusammenhangskomponenten, kürzeste Wege in ungewichteten Graphen).
 - **Dijkstra-Algorithmus** für kürzeste Pfade mit Gewichten.
@@ -106,7 +122,7 @@ for child in range(1, n):
 
 ---
 
-## ⚠️ Stolpersteine
+## Stolpersteine
 
 1. **Gerichtet vs. Ungerichtet:** Bei ungerichteten Graphen darf `graph[v].append(u)` nicht vergessen werden – sonst ist der Graph unvollständig.
 2. **KeyError bei einfachen Dictionaries:** Ein normales `dict` wirft einen Fehler, wenn ein Knoten keine ausgehenden Kanten hat. `defaultdict(list)` oder eine vorbereitete Liste `[[] for _ in range(n)]` verhindert dies.
