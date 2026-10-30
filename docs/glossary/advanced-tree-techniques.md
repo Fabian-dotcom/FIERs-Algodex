@@ -37,7 +37,7 @@ graph BT
     style V2 fill:#009688,stroke:#fff,stroke-width:2px,color:#fff
 ```
 
-### Lowest Common Ancestor (LCA) in $\mathcal{O}(\log n)$
+### Lowest Common Ancestor (LCA) in O(log n)
 1. Bringe beide Knoten $u$ und $v$ auf dieselbe Tiefe, indem der tiefere Knoten über Binary Lifting nach oben gehoben wird.
 2. Wenn $u == v$, ist dies der LCA.
 3. Hebe beide Knoten synchron nach oben, solange ihre $2^j$-ten Vorfahren ungleich sind. Am Ende ist $\text{up}[u][0]$ der gesuchte gemeinsame Vorfahre.
