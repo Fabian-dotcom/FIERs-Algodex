@@ -1,0 +1,64 @@
+---
+tags:
+  - Referenz
+  - Index
+  - Glossar
+---
+
+# Begriffs- & Stichwort-Referenz (Keyword Index)
+
+Diese Seite bietet eine strukturierte Übersicht aller Kernbegriffe, Datenstrukturen, Algorithmen und mathematischen Konzepte im Algodex mit ihren jeweiligen Zielseiten.
+
+---
+
+## Datenstrukturen
+
+| Begriff / Stichworte | Erklärung | Dokumentation |
+| :--- | :--- | :--- |
+| **Adjazenzliste (Adjacency List)** | Dünne Graphspeicherung über Nachbar-Arrays $\mathcal{O}(V + E)$. | [Adjazenzliste](glossary/adjazenzliste.md) |
+| **Adjazenzmatrix (Adjacency Matrix)** | Quadratische Matrix $V \times V$ für dichte Graphen und schnelle Kantenexistenz-Checks. | [Adjazenzmatrix](glossary/adjazenzmatrix.md) |
+| **CSR-Format (Compressed Sparse Row)** | Flache, zusammenhängende 1D-Arrays (`row_ptr`, `targets`, `weights`) für maximale Cache-Lokalität. | [CSR-Format](glossary/csr-format.md) |
+| **Hash Map / Hash Set / Dictionary** | Assoziative Speicherung mit amortisiert $\mathcal{O}(1)$-Zugriff. | [Hash Map & Hash Set](glossary/hash-map.md) |
+| **Verkettete Liste (Linked List)** | Zeigerverkettete Knoten (`ListNode`), Dummy-Head-Pattern. | [Verkettete Liste](glossary/linked-list.md) |
+| **Min-Heap / Priority Queue** | Vorrangswarteschlange für schnellen Zugriff auf das Minimum in $\mathcal{O}(1)$ und Einfügen in $\mathcal{O}(\log n)$. | [Min-Heap & Sweep-Line](glossary/min-heap-sweep-line.md) |
+| **Fenwick-Baum (BIT / Binary Indexed Tree)** | Dynamische Präfixsummen und XOR-Aggregationen in $\mathcal{O}(\log n)$. | [Fortgeschrittene Baum-Techniken](glossary/advanced-tree-techniques.md) |
+
+---
+
+## Algorithmen & Traversierung
+
+| Begriff / Stichworte | Erklärung | Dokumentation |
+| :--- | :--- | :--- |
+| **Tiefensuche (DFS / Depth-First Search)** | Geht Pfade bis zum Ende ab (Rekursion oder expliziter Stack). | [Tiefensuche & Breitensuche](glossary/traversierung-bfs-dfs.md) |
+| **Breitensuche (BFS / Breadth-First Search)** | Schichtweise Erkundung via Queue für ungewichtete kürzeste Wege. | [Tiefensuche & Breitensuche](glossary/traversierung-bfs-dfs.md) |
+| **Topologische Sortierung (Kahn-Algorithmus)** | Lineare Ordnung von Knoten in gerichteten, kreisfreien Graphen (DAGs). | [Topologische Sortierung](glossary/topologische-sortierung.md) |
+| **Dijkstra / Zustandsbasierter Dijkstra** | Kürzeste Pfade mit Min-Heap und erweitertem Zustandsraum `(node, context)`. | [Zustandsbasierter Dijkstra](glossary/state-space-dijkstra.md) |
+| **Zustandsraum-Reduktion** | Minimierung von Pfad-Historien auf essenzielle Invarianten (`letztes_zeichen`, `zaehler`). | [Zustandsbasierter Dijkstra](glossary/state-space-dijkstra.md) |
+| **Flood Fill (Fluten)** | Zusammenhangskomponenten auf 2D-Gittern und Randeliminierung. | [Flood Fill & Gitter-Traversierung](glossary/flood-fill.md) |
+| **Schiebefenster (Sliding Window)** | Dynamische und feste Intervalle mit Two-Pointers in $\mathcal{O}(n)$. | [Schiebefenster](glossary/sliding-window.md) |
+| **Binäre Suche (Binary Search)** | Logarithmische Suche $\mathcal{O}(\log n)$ und Partitionierung zweier sortierter Arrays. | [Binäre Suche](glossary/binary-search.md) |
+| **Sweep-Line** | Ereignispunkt-Traversierung entlang einer Achse zur Intervallverarbeitung. | [Min-Heap & Sweep-Line](glossary/min-heap-sweep-line.md) |
+
+---
+
+## Baum-Spezialtechniken
+
+| Begriff / Stichworte | Erklärung | Dokumentation |
+| :--- | :--- | :--- |
+| **LCA (Lowest Common Ancestor)** | Tiefster gemeinsamer Vorfahre zweier Baumknoten. | [Fortgeschrittene Baum-Techniken](glossary/advanced-tree-techniques.md) |
+| **Binary Lifting** | Vorberechnung von $2^j$-Vorfahren für Baumsprünge in $\mathcal{O}(\log n)$. | [Fortgeschrittene Baum-Techniken](glossary/advanced-tree-techniques.md) |
+| **Euler-Tour (Subtree Linearization)** | Abflachen eines Baumes in 1D-Intervalle $[\text{tin}, \text{tout}]$ via DFS. | [Fortgeschrittene Baum-Techniken](glossary/advanced-tree-techniques.md) |
+
+---
+
+## Mathematik, Bits & Komplexität
+
+| Begriff / Stichworte | Erklärung | Dokumentation |
+| :--- | :--- | :--- |
+| **Landau-Symbole (Big-O Notation)** | Asymptotische Laufzeit- und Speicherkomplexität ($\mathcal{O}(1), \mathcal{O}(\log n), \dots$). | [Landau-Symbole & Big-O](glossary/o-notation.md) |
+| **Bitmasken & Bitweises XOR** | Kompakte Speicherung von Flags und Paritätsberechnungen in $\mathcal{O}(1)$. | [Bitweise Operationen](glossary/bit-manipulation.md) |
+| **Palindrom-Bit-Trick** | Prüfung auf höchstens ein gesetztes Bit via `mask & (mask - 1) == 0`. | [Bitweise Operationen](glossary/bit-manipulation.md) |
+| **Mathematische Zahlenumkehr** | Ziffernextraktion über Modulo/Division ohne String-Allokation. | [Mathematische Zahlenumkehr](glossary/math-number-reversal.md) |
+| **Römische Zahlen** | Additive und subtraktive Konvertierung (Greedy & Rückwärts-Traversierung). | [Römische Zahlen](glossary/roman-numerals.md) |
+| **Kalender- & Datumsarithmetik** | Gregorianische Schaltjahr-Regel und absolute Epochentage. | [Datums- & Kalender-Arithmetik](glossary/date-arithmetic.md) |
+| **Zyklische Permutationen** | Invarianzprüfung zyklischer Verschiebungen und minimale Sortierzüge. | [Zyklische Permutationen](glossary/cyclic-permutations.md) |

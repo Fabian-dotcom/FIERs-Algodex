@@ -5,6 +5,7 @@ tags:
   - Tree
 ---
 
+
 # Lernpfad: Graph- & Baum-Algorithmen
 
 Dieser Lernpfad führt dich strukturiert von den grundlegenden Datenstrukturen bis hin zu fortgeschrittenen Baum- und Pfad-Techniken.
@@ -33,8 +34,8 @@ graph TD
 Bevor man Graphen traversiert, muss man sie effizient im Speicher abbilden:
 
 - [x] **[Adjazenzliste](../glossary/adjazenzliste.md):** Warum $\mathcal{O}(V + E)$ Speicherplatz fast immer besser ist als eine quadratische Matrix.
-- [ ] **Tiefensuche (DFS):** Rekursion, Call-Stack und Traversierungsreihenfolgen (Pre-, In-, Post-Order).
-- [ ] **Breitensuche (BFS):** Queue-basierte Schicht-für-Schicht-Suche für ungewichtete kürzeste Wege.
+- [ ] **[Tiefensuche (DFS)](../glossary/traversierung-bfs-dfs.md):** Rekursion, Call-Stack und Traversierungsreihenfolgen (Pre-, In-, Post-Order).
+- [ ] **[Breitensuche (BFS)](../glossary/traversierung-bfs-dfs.md):** Queue-basierte Schicht-für-Schicht-Suche für ungewichtete kürzeste Wege.
 
 ---
 
@@ -42,7 +43,7 @@ Bevor man Graphen traversiert, muss man sie effizient im Speicher abbilden:
 
 Bäume sind zusammenhängende, kreisfreie Graphen mit $n$ Knoten und $n - 1$ Kanten. Diese Eigenschaft ermöglicht clevere Abkürzungen:
 
-- **LCA (Lowest Common Ancestor):** Der gemeinsame Vorfahre zweier Knoten teilt jeden Baum-Pfad in zwei Abschnitte.
+- **LCA ([Lowest Common Ancestor](../glossary/advanced-tree-techniques.md)):** Der gemeinsame Vorfahre zweier Knoten teilt jeden Baum-Pfad in zwei Abschnitte.
 - **Prefix-Techniken auf Bäumen:**
   - Prefix Sum / Prefix XOR entlang von Wurzel-zu-Knoten-Pfaden.
   - Subtree-Größenberechnung in Post-Order.
@@ -52,4 +53,4 @@ Bäume sind zusammenhängende, kreisfreie Graphen mit $n$ Knoten und $n - 1$ Kan
 ## Herausforderungen aus der Praxis
 
 - [LeetCode 2791: Count Paths That Can Form a Palindrome in a Tree](../solutions/leetcode-2791.md) (Hard)
-  - *Kombination aus Adjazenzliste + DFS + Prefix-XOR + 26-Bit-Maske.*
+  - *Kombination aus [Adjazenzliste](../glossary/adjazenzliste.md) + DFS + Prefix-XOR + 26-Bit-Maske.*

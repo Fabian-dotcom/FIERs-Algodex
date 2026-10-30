@@ -65,11 +65,46 @@ extra_javascript:
 
 nav:
   - Startseite: index.md
+  - Stichwort-Referenz: references.md
   - Lernpfade:
       - Graphen & Bäume: roadmaps/graphs.md
   - Glossar:
       - Adjazenzliste: glossary/adjazenzliste.md
+      - Adjazenzmatrix: glossary/adjazenzmatrix.md
+      - CSR-Format: glossary/csr-format.md
+      - Zustandsbasierter Dijkstra: glossary/state-space-dijkstra.md
+      - Graph-Traversierung (BFS & DFS): glossary/traversierung-bfs-dfs.md
+      - Topologische Sortierung: glossary/topologische-sortierung.md
+      - Landau-Symbole (Big-O): glossary/o-notation.md
+      - Hash Map & Hash Set: glossary/hash-map.md
+      - Verkettete Liste: glossary/linked-list.md
+      - Schiebefenster (Sliding Window): glossary/sliding-window.md
+      - Binäre Suche: glossary/binary-search.md
+      - Mathematische Zahlenumkehr: glossary/math-number-reversal.md
+      - Römische Zahlen & Ziffernsysteme: glossary/roman-numerals.md
+      - Flood Fill & Gitter-Traversierung: glossary/flood-fill.md
+      - Datums- & Kalender-Arithmetik: glossary/date-arithmetic.md
+      - Min-Heap & Sweep-Line: glossary/min-heap-sweep-line.md
+      - Zyklische Permutationen: glossary/cyclic-permutations.md
+      - Bitweise Operationen & Bitmasken: glossary/bit-manipulation.md
+      - Fortgeschrittene Baum-Techniken: glossary/advanced-tree-techniques.md
   - Lösungen:
-      - LeetCode 2791: solutions/leetcode-2791.md
+      - LeetCode 1 (Two Sum): solutions/leetcode-1.md
+      - LeetCode 2 (Add Two Numbers): solutions/leetcode-2.md
+      - LeetCode 3 (Longest Substring Without Repeating Characters): solutions/leetcode-3.md
+      - LeetCode 4 (Median of Two Sorted Arrays): solutions/leetcode-4.md
+      - LeetCode 9 (Palindrome Number): solutions/leetcode-9.md
+      - LeetCode 12 (Integer to Roman): solutions/leetcode-12.md
+      - LeetCode 13 (Roman to Integer): solutions/leetcode-13.md
+      - LeetCode 1254 (Number of Closed Islands): solutions/leetcode-1254.md
+      - LeetCode 1360 (Number of Days Between Two Dates): solutions/leetcode-1360.md
+      - LeetCode 1851 (Minimum Interval to Include Each Query): solutions/leetcode-1851.md
+      - LeetCode 2409 (Count Days Spent Together): solutions/leetcode-2409.md
+      - LeetCode 2791 (Count Paths That Can Form a Palindrome in a Tree): solutions/leetcode-2791.md
+      - LeetCode 3619 (Count Islands With Total Value Divisible by K): solutions/leetcode-3619.md
+      - LeetCode 3644 (Maximum K to Sort a Permutation): solutions/leetcode-3644.md
+      - LeetCode 3841 (Palindromic Path Queries in a Tree): solutions/leetcode-3841.md
+      - LeetCode 3942 (Minimum Operations to Sort a Permutation): solutions/leetcode-3942.md
+      - LeetCode 3963 (Create Grid With Exactly One Path): solutions/leetcode-3963.md
   - Templates:
       - LeetCode Vorlage: templates/leetcode-template.md
