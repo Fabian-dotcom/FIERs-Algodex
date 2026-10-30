@@ -5,6 +5,7 @@ tags:
   - Tree
 ---
 
+
 # Adjazenzliste (Adjacency List)
 
 Die **Adjazenzliste** ist eine der wichtigsten und am häufigsten verwendeten Datenstrukturen zur Repräsentation von **Graphen** und **Bäumen** in der Informatik.
@@ -42,7 +43,7 @@ Adjazenzliste:
 
 ## Vergleich: Adjazenzliste vs. Adjazenzmatrix
 
-| Kriterium | Adjazenzliste | Adjazenzmatrix |
+| Kriterium | Adjazenzliste | [Adjazenzmatrix](adjazenzmatrix.md) |
 | :--- | :--- | :--- |
 | **Speicherplatz** | $\mathcal{O}(V + E)$ (optimal für dünne Graphen) | $\mathcal{O}(V^2)$ (verschwenderisch bei wenigen Kanten) |
 | **Kante $(u, v)$ existiert?** | $\mathcal{O}(\text{deg}(u))$ bzw. $\mathcal{O}(1)$ mit Set | $\mathcal{O}(1)$ |
@@ -116,9 +117,9 @@ for child in range(1, n):
 
 ## Typische Anwendungsfälle
 
-- **Tiefensuche (DFS)** und **Breitensuche (BFS)** (z. B. Zusammenhangskomponenten, kürzeste Wege in ungewichteten Graphen).
-- **Dijkstra-Algorithmus** für kürzeste Pfade mit Gewichten.
-- **Topologische Sortierung** auf gerichteten, kreisfreien Graphen (DAGs).
+- **[Tiefensuche (DFS)](traversierung-bfs-dfs.md)** und **[Breitensuche (BFS)](traversierung-bfs-dfs.md)** (z. B. Zusammenhangskomponenten, kürzeste Wege in ungewichteten Graphen).
+- **[Dijkstra-Algorithmus](state-space-dijkstra.md)** für kürzeste Pfade mit Gewichten.
+- **[[Topologische Sortierung](topologische-sortierung.md)](topologische-sortierung.md)** auf gerichteten, kreisfreien Graphen (DAGs).
 
 ---
 
