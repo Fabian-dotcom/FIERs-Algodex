@@ -1,20 +1,26 @@
 site_name: FIER's Algodex
 site_url: https://Fabian-dotcom.github.io/fiers-algodex/
+site_description: Persönliches Wiki & Nachschlagewerk für Algorithmen, Datenstrukturen und LeetCode-Lösungen in eigenen Worten.
+site_author: Fabian (FIER)
 repo_url: https://github.com/Fabian-dotcom/fiers-algodex
 repo_name: fiers-algodex
 
 theme:
   name: material
+  language: de
   palette:
-    # Helles Theme (Standard)
-    - scheme: default
+    # Automatisch hell basierend auf Systemeinstellung
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: indigo
       accent: blue
       toggle:
         icon: material/brightness-7
         name: In den dunklen Modus wechseln
-    # Dunkles Theme
-    - scheme: slate
+
+    # Automatisch dunkel basierend auf Systemeinstellung
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: indigo
       accent: blue
       toggle:
@@ -23,19 +29,35 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
+    - navigation.top
     - search.highlight
     - search.suggest
+    - search.share
     - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - search
+  - tags
 
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.arithmatex:
       generic: true
+  - attr_list
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -43,7 +65,11 @@ extra_javascript:
 
 nav:
   - Startseite: index.md
+  - Lernpfade:
+      - Graphen & Bäume: roadmaps/graphs.md
   - Glossar:
       - Adjazenzliste: glossary/adjazenzliste.md
   - Lösungen:
       - LeetCode 2791: solutions/leetcode-2791.md
+  - Templates:
+      - LeetCode Vorlage: templates/leetcode-template.md
