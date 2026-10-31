@@ -2,17 +2,27 @@
 tags:
   - Übersicht
   - Home
+  - Core
 ---
 
 # FIER's Algodex
 
-> Ein persönliches, interaktives Nachschlagewerk und Lern-Wiki für **Algorithmen**, **Datenstrukturen** und **LeetCode-Lösungen in Python 3** – mathematisch fundiert, praxisnah und in eigenen Worten aufbereitet.
+> Ein interaktives Entwickler-Wiki und Nachschlagewerk für **Algorithmen**, **Datenstrukturen** und **LeetCode-Lösungen in Python 3** – mit strikter Typisierung, mathematischen Komplexitätsanalysen und Diagrammen.
+
+---
+
+## Plattform-Übersicht
+
+FIER's Wiki gliedert sich in zwei eigenständige, spezialisierte Fachbereiche:
+
+| Bereich | Fokus & Themen | Einstiegspunkt |
+| :--- | :--- | :--- |
+| **FIER's Algodex** | Datenstrukturen, Algorithmen, Komplexität & LeetCode-Lösungen | [Startseite](index.md) (Aktuell hier) |
+| **FIER's Red Algodex** | Web Security, PortSwigger-Techniken, OWASP Top 10 & Bug Bounties | [Red Algodex Startseite](red-algodex/index.md) |
 
 ---
 
 ## Schnellzugriff (Quick-Access Cards)
-
-Hier findest du direkten Zugang zu den meistgenutzten Grundlagen und anspruchsvollsten Algorithmen:
 
 === "Konzepte & Datenstrukturen"
 
@@ -31,20 +41,14 @@ Hier findest du direkten Zugang zu den meistgenutzten Grundlagen und anspruchsvo
     - **[LeetCode 1851: Minimum Interval to Include Each Query](solutions/leetcode-1851.md):** Sweep-Line mit Min-Heap und Lazy Invalidation in $\mathcal{O}((n + k) \log(n + k))$.
     - **[LeetCode 4: Median of Two Sorted Arrays](solutions/leetcode-4.md):** Binäre Suche auf der Partitionierung zweier sortierter Arrays in $\mathcal{O}(\log(\min(m, n)))$.
 
-=== "Web Security & Bug Bounty"
+=== "Offensive Security (Red Algodex)"
 
-    - **[Burp Suite Grundlagen](glossary/burp-suite-basics.md):** Proxy, Repeater, Intruder und BApp Extensions (Autorize, Turbo Intruder).
-    - **[Web-Fundamente (HTTP, SOP, CORS, CSP)](glossary/web-sec-http-sop-cors-csp.md):** HTTP-Verben, Same-Origin Policy, CORS-Header und Content Security Policy.
-    - **[Cross-Site Scripting (XSS)](glossary/web-sec-xss.md):** Reflected, Stored und DOM-based XSS, Sources/Sinks und CSP.
-    - **[CSRF, CORS-Leaks & Clickjacking](glossary/web-sec-client-side-advanced.md):** Auto-Submit PoCs, Origin-Reflection und transparente iFrame-Überlagerungen.
-    - **[SQL Injection (SQLi)](glossary/web-sec-sqli.md):** Union-Based, Error-Based und Blind SQLi (Boolean/Time) sowie Prepared Statements.
-    - **[Server-Side Request Forgery (SSRF)](glossary/web-sec-ssrf.md):** Cloud-Metadaten (AWS IMDS), Filter-Bypasses und OAST.
-    - **[Broken Access Control & IDOR](glossary/web-sec-access-control-idor.md):** Horizontale/vertikale Rechteausweitung und automatisierte Bypasses mit Autorize.
-    - **[Command Injection, Path Traversal & SSTI](glossary/web-sec-command-injection-ssti.md):** Shell-Injektionen, `/etc/passwd`-Traversal und Template-RCE.
-    - **[Business Logic & JWT-Schwachstellen](glossary/web-sec-business-logic-jwt.md):** Logikfehler, `alg: none` und Key Confusion.
-    - **[Request Smuggling & Race Conditions](glossary/web-sec-advanced-attacks.md):** CL.TE / TE.CL Desynchronisation und Single-Packet Attacks.
-    - **[Reconnaissance & Bug Bounty Reporting](glossary/web-sec-recon-reporting.md):** Asset Discovery (`subfinder`), Fuzzing (`ffuf`), `nuclei` und CVSS-Reports.
-    - **[Lernpfad: Web Security & Bug Bounty](roadmaps/web-security.md):** Chronologischer Schritt-für-Schritt-Guide von PortSwigger bis Recon.
+    - **[Red Algodex Hub](red-algodex/index.md):** Der eigenständige Bereich für Penetration Testing und Bug Bounties.
+    - **[Burp Suite Grundlagen](red-algodex/tools/burp-suite-basics.md):** Proxy, Repeater, Intruder und BApp Extensions (Autorize, Turbo Intruder).
+    - **[Cross-Site Scripting (XSS)](red-algodex/vulnerabilities/xss.md):** Reflected, Stored und DOM-based XSS, Sources/Sinks und CSP.
+    - **[SQL Injection (SQLi)](red-algodex/vulnerabilities/sqli.md):** Union-Based, Error-Based und Blind SQLi sowie Prepared Statements.
+    - **[Server-Side Request Forgery (SSRF)](red-algodex/vulnerabilities/ssrf.md):** Cloud-Metadaten (AWS IMDS), Filter-Bypasses und OAST.
+    - **[Broken Access Control & IDOR](red-algodex/vulnerabilities/access-control-idor.md):** Horizontale/vertikale Rechteausweitung und automatisierte Bypasses mit Autorize.
 
 === "Referenzen & Community"
 
@@ -55,62 +59,15 @@ Hier findest du direkten Zugang zu den meistgenutzten Grundlagen und anspruchsvo
 
 ---
 
-## Interaktive Roadmap & Lernfortschritt
+## Die Lernpfade
 
-Nutze diese interaktiven Checklisten, um deinen persönlichen Lernfortschritt strukturiert nachzuverfolgen:
+Die detaillierten Checklisten und Stufenpläne findest du auf den jeweiligen Lernpfad-Seiten:
 
-### 1. Grundlagen & Lineare Strukturen
-- [x] **[Landau-Symbole & Big-O Notation](glossary/o-notation.md):** Asymptotische Laufzeiten und Speicherkomplexität verstehen.
-- [x] **[Hash Map & Hash Set](glossary/hash-map.md):** Schnelle $\mathcal{O}(1)$-Lookups und das Two-Sum-Komplement-Muster.
-- [x] **[Verkettete Liste](glossary/linked-list.md):** ListNode-Architektur, Dummy-Head-Pattern und schriftliche Addition.
-- [x] **[Schiebefenster (Sliding Window)](glossary/sliding-window.md):** Dynamische Fenster, Substrings ohne Duplikate und ASCII-Array-Tuning.
-- [x] **[Binäre Suche](glossary/binary-search.md):** Logarithmischer Suchraum und Partitionierung zweier sortierter Arrays.
-- [ ] **Two Pointers:** Kollidierende Zeiger und Intervalle (Two Sum II, 3Sum, Container With Most Water).
-
-### 2. Graphen, Bäume & Kürzeste Pfade
-- [x] **[Adjazenzliste](glossary/adjazenzliste.md) & [Adjazenzmatrix](glossary/adjazenzmatrix.md):** Wann Speicherplatz $\mathcal{O}(V + E)$ einer $\mathcal{O}(V^2)$-Matrix überlegen ist.
-- [x] **[CSR-Format (Compressed Sparse Row)](glossary/csr-format.md):** Flache Arrays statt Listen-Overhead für maximale Cache-Lokalität.
-- [x] **[Graph-Traversierung (BFS & DFS)](glossary/traversierung-bfs-dfs.md):** Schichtweise Breitensuche vs. Tiefensuche mit manuellem Stack.
-- [x] **[Flood Fill & Gitter-Traversierung](glossary/flood-fill.md):** Randeliminierung (Boundary Invalidation) und In-Place Fluten.
-- [x] **[Topologische Sortierung](glossary/topologische-sortierung.md):** Kahn-Algorithmus mit In-Degree Queue und Zykluserkennung in DAGs.
-- [x] **[Zustandsbasierter Dijkstra](glossary/state-space-dijkstra.md):** Kürzeste Pfade mit Zustandsraum-Reduktion und Min-Heap.
-- [x] **[Fortgeschrittene Baum-Techniken](glossary/advanced-tree-techniques.md):** Lowest Common Ancestor (LCA) via Binary Lifting, Euler-Tour und Fenwick-Baum.
-
-### 3. Mathematik, Diskrete Strukturen & Bit-Tricks
-- [x] **[Mathematische Zahlenumkehr](glossary/math-number-reversal.md):** Modulo/Divisions-Zerlegung und Palindrom-Check ohne String-Allokation.
-- [x] **[Römische Zahlen & Ziffernsysteme](glossary/roman-numerals.md):** Greedy-Zerlegung und Rückwärts-Traversierung.
-- [x] **[Datums- & Kalender-Arithmetik](glossary/date-arithmetic.md):** Gregorianische Schaltjahres-Formeln und Epochentage.
-- [x] **[Bitweise Operationen & Bitmasken](glossary/bit-manipulation.md):** AND, OR, XOR, Shifts und akkumulierendes Bit-AND.
-- [x] **[Palindrom-Bit-Trick](glossary/bit-manipulation.md):** Paritätsprüfung in $\mathcal{O}(1)$ über `mask & (mask - 1) == 0`.
-- [x] **[Zyklische Permutationen](glossary/cyclic-permutations.md):** Invarianz-Prüfung und minimale Sortieroperationen (Shift & Reverse).
-
-### 4. Dynamische Programmierung & Fortgeschrittenes
-- [x] **[Zustandsbasierte DP auf Graphen](glossary/state-space-dijkstra.md):** Zustandsraum-Erweiterung und Relaxation.
-- [ ] **1D- & 2D-Tabulation:** Longest Increasing Subsequence (LIS), Longest Common Subsequence (LCS).
-- [ ] **Rucksack-Probleme (Knapsack):** 0/1 Knapsack, Subset Sum, Unbounded Knapsack.
-- [ ] **Bitmask-DP:** Hamilton-Pfade und Traveling Salesperson Problem in $\mathcal{O}(2^n \cdot n^2)$.
-- [x] **[Graph Neural Networks (GNN)](glossary/gnn.md) & [PageRank](glossary/pagerank.md):** Message Passing und Power Iteration auf relationalen Graphen.
-
-### 5. Web Security & Bug Bounty Hunting
-- [x] **[Web-Fundamente](glossary/web-sec-http-sop-cors-csp.md):** HTTP/1.1 & HTTP/2, Cookie-Sicherheit, Same-Origin Policy (SOP), CORS und CSP.
-- [x] **[Burp Suite Mastery](glossary/burp-suite-basics.md):** Proxy, Intercept, Repeater, Intruder und BApp Extensions.
-- [x] **[Client-Side Angriffe (XSS, CSRF, Clickjacking)](glossary/web-sec-xss.md):** Reflected/Stored/DOM XSS und [CSRF & Clickjacking](glossary/web-sec-client-side-advanced.md).
-- [x] **[Server-Side Angriffe (SQLi & SSRF)](glossary/web-sec-sqli.md):** Union-, Error- und Blind-Injections sowie Cloud-Metadaten-Extraktion via [SSRF](glossary/web-sec-ssrf.md).
-- [x] **[Systemzugriff (Command Injection, Path Traversal & SSTI)](glossary/web-sec-command-injection-ssti.md):** Shell-Injektionen und Template-RCE.
-- [x] **[Autorisierungsfehler (IDOR & Access Control)](glossary/web-sec-access-control-idor.md):** Objekt-Level Autorisierung und horizontal/vertikal Escalation.
-- [x] **[Business Logic & Authentifizierung (JWT)](glossary/web-sec-business-logic-jwt.md):** Logikfehler, `alg: none` und Signatur-Bypasses.
-- [x] **[Fortgeschritten: Request Smuggling & Race Conditions](glossary/web-sec-advanced-attacks.md):** CL.TE / TE.CL Desynchronisation und Single-Packet Attacks.
-- [x] **[Reconnaissance, Automatisierung & Reporting](glossary/web-sec-recon-reporting.md):** Asset Discovery (`subfinder`, `puredns`), Fuzzing (`ffuf`), `nuclei` und CVSS-Reports.
-
----
-
-## Alle Lernpfade im Detail
-
-- **[Lernpfad: Graphen & Bäume](roadmaps/graphs.md):** Repräsentation, Traversierung, Kürzeste Pfade, Euler-Tour und LCA.
+- **[Lernpfad: Graphen & Bäume](roadmaps/graphs.md):** Repräsentation (Adjazenzliste, Matrix, CSR), Traversierung (BFS/DFS), Kürzeste Pfade, Euler-Tour und LCA.
 - **[Lernpfad: Arrays, Strings & Sequenz-Muster](roadmaps/arrays-strings.md):** Two Pointers, Sliding Window, Sweep-Line und Binäre Suche.
 - **[Lernpfad: Dynamische Programmierung (DP)](roadmaps/dynamic-programming.md):** Memoization, Tabulation, Knapsack und Zustandsräume.
 - **[Lernpfad: Mathematik & Bit-Manipulation](roadmaps/math-bit-manipulation.md):** Bitmasken, XOR-Tricks, Zahlenspiegelung und Kalenderarithmetik.
-- **[Lernpfad: Web Security & Bug Bounty](roadmaps/web-security.md):** Von HTTP-Grundlagen über Burp Suite bis hin zu OWASP Top 10 und Recon.
+- **[Lernpfad: Web Security & Bug Bounty](red-algodex/roadmaps/web-security.md):** Chronologischer Stufenplan von HTTP-Basics über Burp Suite bis hin zu OWASP Top 10 und Recon.
 
 ---
 
@@ -128,4 +85,4 @@ Jede Seite im Algodex folgt einem einheitlichen Standard:
 
 ## Navigation & Suche
 
-Nutze die Seitenleiste links, das Glossar oder die Tastatur-Schnellsuche (<kbd>s</kbd> oder <kbd>/</kbd>), um direkt nach Algorithmen, Datenstrukturen oder LeetCode-IDs zu suchen.
+Nutze die obere Tableiste zur Umschaltung zwischen **Core Algodex** und **Red Algodex**, die linke Seitenleiste zur Navigation oder die Tastatur-Schnellsuche (<kbd>s</kbd> oder <kbd>/</kbd>).

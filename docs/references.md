@@ -69,19 +69,21 @@ Diese Seite bietet eine strukturierte Übersicht aller Kernbegriffe, Datenstrukt
 
 ---
 
-## Web Security & Bug Bounty Hunting
+## Web Security & Bug Bounty Hunting (Red Algodex)
 
 | Begriff / Stichworte | Erklärung | Dokumentation |
 | :--- | :--- | :--- |
-| **Burp Suite (Proxy, Repeater, Intruder)** | Man-in-the-Middle HTTP-Proxy zum Abfangen, Manipulieren und Fuzzen von Web-Requests. | [Burp Suite Grundlagen](glossary/burp-suite-basics.md) |
-| **Cross-Site Scripting (XSS)** | Clientseitige Code-Ausführung (Reflected, Stored, DOM) im Browser des Opfers. | [Cross-Site Scripting (XSS)](glossary/web-sec-xss.md) |
-| **SQL Injection (SQLi)** | Manipulation von Datenbankabfragen (Union, Error, Blind, Time-based) und Prepared Statements. | [SQL Injection (SQLi)](glossary/web-sec-sqli.md) |
-| **Server-Side Request Forgery (SSRF)** | Unautorisierte interne Requests durch den Webserver (Cloud-Metadaten, IMDS, OAST). | [Server-Side Request Forgery (SSRF)](glossary/web-sec-ssrf.md) |
-| **Broken Access Control & IDOR** | Fehlerhafte Berechtigungsprüfungen, Objekt-Level Autorisierung und Privilege Escalation. | [Broken Access Control & IDOR](glossary/web-sec-access-control-idor.md) |
-| **Command Injection & Path Traversal** | Ausführung von Shell-Befehlen und unbefugtes Auslesen von Systemdateien via `../`. | [Command Injection, Path Traversal & SSTI](glossary/web-sec-command-injection-ssti.md) |
-| **Server-Side Template Injection (SSTI)** | Codeausführung über Template-Engines (Jinja2, Twig, FreeMarker). | [Command Injection, Path Traversal & SSTI](glossary/web-sec-command-injection-ssti.md) |
-| **Business Logic Flaws** | Umgehung von Workflows, negative Preise und Coupon Stacking. | [Business Logic & JWT](glossary/web-sec-business-logic-jwt.md) |
-| **JWT-Schwachstellen** | `alg: none` Angriffe, schwache HMAC-Secrets und Algorithm Confusion. | [Business Logic & JWT](glossary/web-sec-business-logic-jwt.md) |
-| **HTTP Request Smuggling** | Desynchronisation zwischen Frontend-Proxy und Backend (CL.TE / TE.CL). | [Request Smuggling & Race Conditions](glossary/web-sec-advanced-attacks.md) |
-| **Race Conditions (TOCTOU)** | Gleichzeitige Anfragen und Single-Packet Attacks mit Turbo Intruder. | [Request Smuggling & Race Conditions](glossary/web-sec-advanced-attacks.md) |
-| **Bug Bounty Reconnaissance** | Asset Discovery, DNS Brute-Forcing, Content-Fuzzing (`ffuf`, `nuclei`) und CVSS-Reports. | [Reconnaissance & Reporting](glossary/web-sec-recon-reporting.md) |
+| **Burp Suite (Proxy, Repeater, Intruder)** | Man-in-the-Middle HTTP-Proxy zum Abfangen, Manipulieren und Fuzzen von Web-Requests. | [Burp Suite Grundlagen](red-algodex/tools/burp-suite-basics.md) |
+| **Web-Fundamente (HTTP, SOP, CORS, CSP)** | Browsergrenzen, Session-Sicherheit und Content Security Policies. | [Web-Fundamente](red-algodex/vulnerabilities/http-sop-cors-csp.md) |
+| **Cross-Site Scripting (XSS)** | Clientseitige Code-Ausführung (Reflected, Stored, DOM) im Browser des Opfers. | [Cross-Site Scripting (XSS)](red-algodex/vulnerabilities/xss.md) |
+| **Client-Side (CSRF, CORS, Clickjacking)** | Unbeabsichtigte Anfragen, Origin-Leaks und UI-Redressing. | [Client-Side Angriffe](red-algodex/vulnerabilities/client-side-advanced.md) |
+| **SQL Injection (SQLi)** | Manipulation von Datenbankabfragen (Union, Error, Blind, Time-based) und Prepared Statements. | [SQL Injection (SQLi)](red-algodex/vulnerabilities/sqli.md) |
+| **Server-Side Request Forgery (SSRF)** | Unautorisierte interne Requests durch den Webserver (Cloud-Metadaten, IMDS, OAST). | [Server-Side Request Forgery (SSRF)](red-algodex/vulnerabilities/ssrf.md) |
+| **Broken Access Control & IDOR** | Fehlerhafte Berechtigungsprüfungen, Objekt-Level Autorisierung und Privilege Escalation. | [Broken Access Control & IDOR](red-algodex/vulnerabilities/access-control-idor.md) |
+| **Command Injection & Path Traversal** | Ausführung von Shell-Befehlen und unbefugtes Auslesen von Systemdateien via `../`. | [Command Injection, Path Traversal & SSTI](red-algodex/vulnerabilities/command-injection-ssti.md) |
+| **Server-Side Template Injection (SSTI)** | Codeausführung über Template-Engines (Jinja2, Twig, FreeMarker). | [Command Injection, Path Traversal & SSTI](red-algodex/vulnerabilities/command-injection-ssti.md) |
+| **Business Logic Flaws** | Umgehung von Workflows, negative Preise und Coupon Stacking. | [Business Logic & JWT](red-algodex/vulnerabilities/business-logic-jwt.md) |
+| **JWT-Schwachstellen** | `alg: none` Angriffe, schwache HMAC-Secrets und Algorithm Confusion. | [Business Logic & JWT](red-algodex/vulnerabilities/business-logic-jwt.md) |
+| **HTTP Request Smuggling** | Desynchronisation zwischen Frontend-Proxy und Backend (CL.TE / TE.CL). | [Request Smuggling & Race Conditions](red-algodex/vulnerabilities/advanced-attacks.md) |
+| **Race Conditions (TOCTOU)** | Gleichzeitige Anfragen und Single-Packet Attacks mit Turbo Intruder. | [Request Smuggling & Race Conditions](red-algodex/vulnerabilities/advanced-attacks.md) |
+| **Bug Bounty Reconnaissance** | Asset Discovery, DNS Brute-Forcing, Content-Fuzzing (`ffuf`, `nuclei`) und CVSS-Reports. | [Reconnaissance & Reporting](red-algodex/tools/recon-reporting.md) |

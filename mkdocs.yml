@@ -1,6 +1,6 @@
 site_name: FIER's Algodex
 site_url: https://Fabian-dotcom.github.io/fiers-algodex/
-site_description: Persönliches Wiki & Nachschlagewerk für Algorithmen, Datenstrukturen und LeetCode-Lösungen in eigenen Worten.
+site_description: Persönliches Wiki & Nachschlagewerk für Algorithmen, Datenstrukturen, LeetCode-Lösungen und Web Security.
 site_author: Fabian (FIER)
 repo_url: https://github.com/Fabian-dotcom/fiers-algodex
 repo_name: fiers-algodex
@@ -29,12 +29,18 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
     - navigation.top
     - search.highlight
     - search.suggest
     - search.share
     - content.code.copy
     - content.code.annotate
+
+extra_css:
+  - stylesheets/red-theme.css
 
 plugins:
   - search
@@ -64,68 +70,78 @@ extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-  - Startseite: index.md
-  - Stichwort-Referenz: references.md
-  - Changelog: changelog.md
-  - Lernpfade:
-      - Graphen & Bäume: roadmaps/graphs.md
-      - Arrays & Strings: roadmaps/arrays-strings.md
-      - Dynamische Programmierung: roadmaps/dynamic-programming.md
-      - Mathematik & Bit-Manipulation: roadmaps/math-bit-manipulation.md
-      - Web Security & Bug Bounty: roadmaps/web-security.md
-  - Glossar:
-      - Adjazenzliste: glossary/adjazenzliste.md
-      - Adjazenzmatrix: glossary/adjazenzmatrix.md
-      - CSR-Format: glossary/csr-format.md
-      - PageRank: glossary/pagerank.md
-      - Graph Neural Networks (GNN): glossary/gnn.md
-      - SciPy & Matrix-Vektor (SpMV): glossary/scipy-matrix-vector.md
-      - Speicher & Garbage Collection: glossary/memory-management.md
-      - Zustandsbasierter Dijkstra: glossary/state-space-dijkstra.md
-      - Graph-Traversierung (BFS & DFS): glossary/traversierung-bfs-dfs.md
-      - Topologische Sortierung: glossary/topologische-sortierung.md
-      - Landau-Symbole (Big-O): glossary/o-notation.md
-      - Hash Map & Hash Set: glossary/hash-map.md
-      - Verkettete Liste: glossary/linked-list.md
-      - Schiebefenster (Sliding Window): glossary/sliding-window.md
-      - Binäre Suche: glossary/binary-search.md
-      - Mathematische Zahlenumkehr: glossary/math-number-reversal.md
-      - Römische Zahlen & Ziffernsysteme: glossary/roman-numerals.md
-      - Flood Fill & Gitter-Traversierung: glossary/flood-fill.md
-      - Datums- & Kalender-Arithmetik: glossary/date-arithmetic.md
-      - Min-Heap & Sweep-Line: glossary/min-heap-sweep-line.md
-      - Zyklische Permutationen: glossary/cyclic-permutations.md
-      - Bitweise Operationen & Bitmasken: glossary/bit-manipulation.md
-      - Fortgeschrittene Baum-Techniken: glossary/advanced-tree-techniques.md
-      - Burp Suite Grundlagen: glossary/burp-suite-basics.md
-      - Web-Fundamente (HTTP, SOP, CORS, CSP): glossary/web-sec-http-sop-cors-csp.md
-      - Client-Side (CSRF, CORS, Clickjacking): glossary/web-sec-client-side-advanced.md
-      - Cross-Site Scripting (XSS): glossary/web-sec-xss.md
-      - SQL Injection (SQLi): glossary/web-sec-sqli.md
-      - Server-Side Request Forgery (SSRF): glossary/web-sec-ssrf.md
-      - Broken Access Control & IDOR: glossary/web-sec-access-control-idor.md
-      - Command Injection, Path Traversal & SSTI: glossary/web-sec-command-injection-ssti.md
-      - Business Logic & JWT-Schwachstellen: glossary/web-sec-business-logic-jwt.md
-      - Request Smuggling & Race Conditions: glossary/web-sec-advanced-attacks.md
-      - Reconnaissance, Tools & Reporting: glossary/web-sec-recon-reporting.md
-  - Lösungen:
-      - LeetCode 1 (Two Sum): solutions/leetcode-1.md
-      - LeetCode 2 (Add Two Numbers): solutions/leetcode-2.md
-      - LeetCode 3 (Longest Substring Without Repeating Characters): solutions/leetcode-3.md
-      - LeetCode 4 (Median of Two Sorted Arrays): solutions/leetcode-4.md
-      - LeetCode 9 (Palindrome Number): solutions/leetcode-9.md
-      - LeetCode 12 (Integer to Roman): solutions/leetcode-12.md
-      - LeetCode 13 (Roman to Integer): solutions/leetcode-13.md
-      - LeetCode 1254 (Number of Closed Islands): solutions/leetcode-1254.md
-      - LeetCode 1360 (Number of Days Between Two Dates): solutions/leetcode-1360.md
-      - LeetCode 1851 (Minimum Interval to Include Each Query): solutions/leetcode-1851.md
-      - LeetCode 2409 (Count Days Spent Together): solutions/leetcode-2409.md
-      - LeetCode 2791 (Count Paths That Can Form a Palindrome in a Tree): solutions/leetcode-2791.md
-      - LeetCode 3619 (Count Islands With Total Value Divisible by K): solutions/leetcode-3619.md
-      - LeetCode 3644 (Maximum K to Sort a Permutation): solutions/leetcode-3644.md
-      - LeetCode 3841 (Palindromic Path Queries in a Tree): solutions/leetcode-3841.md
-      - LeetCode 3942 (Minimum Operations to Sort a Permutation): solutions/leetcode-3942.md
-      - LeetCode 3963 (Create Grid With Exactly One Path): solutions/leetcode-3963.md
-      - LeetCode 3970 (Shortest Path With At Most K Consecutive Identical Characters): solutions/leetcode-3970.md
-  - Templates:
-      - LeetCode Vorlage: templates/leetcode-template.md
+  - Core Algodex:
+      - Startseite: index.md
+      - Stichwort-Referenz: references.md
+      - Changelog: changelog.md
+      - Lernpfade:
+          - Graphen & Bäume: roadmaps/graphs.md
+          - Arrays & Strings: roadmaps/arrays-strings.md
+          - Dynamische Programmierung: roadmaps/dynamic-programming.md
+          - Mathematik & Bit-Manipulation: roadmaps/math-bit-manipulation.md
+      - Glossar:
+          - Graphentheorie:
+              - Adjazenzliste: glossary/adjazenzliste.md
+              - Adjazenzmatrix: glossary/adjazenzmatrix.md
+              - CSR-Format: glossary/csr-format.md
+              - Graph-Traversierung (BFS & DFS): glossary/traversierung-bfs-dfs.md
+              - Topologische Sortierung: glossary/topologische-sortierung.md
+              - Zustandsbasierter Dijkstra: glossary/state-space-dijkstra.md
+              - Fortgeschrittene Baum-Techniken: glossary/advanced-tree-techniques.md
+              - PageRank: glossary/pagerank.md
+              - Graph Neural Networks (GNN): glossary/gnn.md
+          - Lineare Strukturen & Suche:
+              - Hash Map & Hash Set: glossary/hash-map.md
+              - Verkettete Liste: glossary/linked-list.md
+              - Schiebefenster (Sliding Window): glossary/sliding-window.md
+              - Binäre Suche: glossary/binary-search.md
+              - Min-Heap & Sweep-Line: glossary/min-heap-sweep-line.md
+          - Diskrete Mathematik & Bits:
+              - Landau-Symbole (Big-O): glossary/o-notation.md
+              - Bitweise Operationen & Bitmasken: glossary/bit-manipulation.md
+              - Mathematische Zahlenumkehr: glossary/math-number-reversal.md
+              - Römische Zahlen & Ziffernsysteme: glossary/roman-numerals.md
+              - Datums- & Kalender-Arithmetik: glossary/date-arithmetic.md
+              - Zyklische Permutationen: glossary/cyclic-permutations.md
+          - System & Performance:
+              - Flood Fill & Gitter-Traversierung: glossary/flood-fill.md
+              - SciPy & Matrix-Vektor (SpMV): glossary/scipy-matrix-vector.md
+              - Speicher & Garbage Collection: glossary/memory-management.md
+      - LeetCode Lösungen:
+          - LeetCode 1 (Two Sum): solutions/leetcode-1.md
+          - LeetCode 2 (Add Two Numbers): solutions/leetcode-2.md
+          - LeetCode 3 (Longest Substring Without Repeating Characters): solutions/leetcode-3.md
+          - LeetCode 4 (Median of Two Sorted Arrays): solutions/leetcode-4.md
+          - LeetCode 9 (Palindrome Number): solutions/leetcode-9.md
+          - LeetCode 12 (Integer to Roman): solutions/leetcode-12.md
+          - LeetCode 13 (Roman to Integer): solutions/leetcode-13.md
+          - LeetCode 1254 (Number of Closed Islands): solutions/leetcode-1254.md
+          - LeetCode 1360 (Number of Days Between Two Dates): solutions/leetcode-1360.md
+          - LeetCode 1851 (Minimum Interval to Include Each Query): solutions/leetcode-1851.md
+          - LeetCode 2409 (Count Days Spent Together): solutions/leetcode-2409.md
+          - LeetCode 2791 (Count Paths That Can Form a Palindrome in a Tree): solutions/leetcode-2791.md
+          - LeetCode 3619 (Count Islands With Total Value Divisible by K): solutions/leetcode-3619.md
+          - LeetCode 3644 (Maximum K to Sort a Permutation): solutions/leetcode-3644.md
+          - LeetCode 3841 (Palindromic Path Queries in a Tree): solutions/leetcode-3841.md
+          - LeetCode 3942 (Minimum Operations to Sort a Permutation): solutions/leetcode-3942.md
+          - LeetCode 3963 (Create Grid With Exactly One Path): solutions/leetcode-3963.md
+          - LeetCode 3970 (Shortest Path With At Most K Consecutive Identical Characters): solutions/leetcode-3970.md
+      - Templates:
+          - LeetCode Vorlage: templates/leetcode-template.md
+
+  - Red Algodex (Security Hub):
+      - Red Algodex Startseite: red-algodex/index.md
+      - Lernpfad Web Security: red-algodex/roadmaps/web-security.md
+      - Vulnerabilities & Exploits:
+          - Web-Fundamente (HTTP, SOP, CORS, CSP): red-algodex/vulnerabilities/http-sop-cors-csp.md
+          - Cross-Site Scripting (XSS): red-algodex/vulnerabilities/xss.md
+          - Client-Side (CSRF, CORS, Clickjacking): red-algodex/vulnerabilities/client-side-advanced.md
+          - SQL Injection (SQLi): red-algodex/vulnerabilities/sqli.md
+          - Server-Side Request Forgery (SSRF): red-algodex/vulnerabilities/ssrf.md
+          - Broken Access Control & IDOR: red-algodex/vulnerabilities/access-control-idor.md
+          - Command Injection, Path Traversal & SSTI: red-algodex/vulnerabilities/command-injection-ssti.md
+          - Business Logic & JWT-Schwachstellen: red-algodex/vulnerabilities/business-logic-jwt.md
+          - Request Smuggling & Race Conditions: red-algodex/vulnerabilities/advanced-attacks.md
+      - Tools & Recon:
+          - Burp Suite Grundlagen: red-algodex/tools/burp-suite-basics.md
+          - Reconnaissance, Fuzzing & Reporting: red-algodex/tools/recon-reporting.md

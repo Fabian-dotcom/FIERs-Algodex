@@ -57,9 +57,9 @@ Set-Cookie: session_id=abc123xyz; Secure; HttpOnly; SameSite=Lax; Path=/; Domain
 
 | Flag | Schutzfunktion | Angriff ohne dieses Flag |
 | :--- | :--- | :--- |
-| **`HttpOnly`** | Verhindert den Zugriff durch clientseitiges JavaScript (`document.cookie`). | Bei [XSS](web-sec-xss.md) kann der Session-Token sofort gestohlen werden. |
+| **`HttpOnly`** | Verhindert den Zugriff durch clientseitiges JavaScript (`document.cookie`). | Bei [XSS](xss.md) kann der Session-Token sofort gestohlen werden. |
 | **`Secure`** | Cookie wird ausschließlich über verschlüsselte HTTPS-Verbindungen gesendet. | Abfangen des Tokens im offenen WLAN (Man-in-the-Middle). |
-| **`SameSite=Strict`** | Cookie wird bei seitenübergreifenden Anfragen (Cross-Site) **niemals** mitgesendet. | Verhindert [CSRF](web-sec-client-side-advanced.md) vollständig. |
+| **`SameSite=Strict`** | Cookie wird bei seitenübergreifenden Anfragen (Cross-Site) **niemals** mitgesendet. | Verhindert [CSRF](client-side-advanced.md) vollständig. |
 | **`SameSite=Lax`** | Standard in modernen Browsern. Wird nur bei sicheren Top-Level-Navigationen (z. B. Anklicken eines Links) mitgesendet, nicht bei POST-Requests von fremden Seiten. | Schutz vor den meisten CSRF-Angriffen. |
 | **`SameSite=None`** | Cookie wird immer mitgesendet (erfordert zwingend das `Secure`-Flag). | Erlaubt Cross-Site-Tracking und ist anfällig für CSRF ohne Token. |
 

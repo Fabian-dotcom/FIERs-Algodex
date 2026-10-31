@@ -77,7 +77,7 @@ Erkennt Schwachstellen, bei denen der Server keine direkte Fehlermeldung im HTTP
 
 In der Burp Suite Community & Professional Edition können über den **BApp Store** Plugins nachinstalliert werden:
 
-1. **Autorize:** Testet vollautomatisch im Hintergrund auf Autorisierungs-Lücken ([Broken Access Control / IDOR](web-sec-access-control-idor.md)), indem jeder Request deines Admin-Accounts mit den Cookies eines Low-Privilege-Users wiederholt wird.
+1. **Autorize:** Testet vollautomatisch im Hintergrund auf Autorisierungs-Lücken ([Broken Access Control / IDOR](../vulnerabilities/access-control-idor.md)), indem jeder Request deines Admin-Accounts mit den Cookies eines Low-Privilege-Users wiederholt wird.
 2. **Turbo Intruder:** Extrem schneller HTTP-Fuzzer auf Python-Basis (entwickelt von James Kettle), unverzichtbar für [Race Condition Exploits](../roadmaps/web-security.md) mit Single-Packet Attacks.
 3. **Param Miner:** Sucht automatisch nach versteckten Parametern und Headern (z. B. für Web Cache Poisoning).
 4. **Hackvertor:** Tag-basiertes Encoding-Tool zur einfachen Umgehung von Web Application Firewalls (WAFs).
