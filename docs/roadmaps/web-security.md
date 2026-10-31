@@ -43,12 +43,10 @@ graph TD
 
 Bevor man Sicherheitslücken findet, muss man verstehen, wie das Webprotokoll und Webanwendungen auf Byte-Ebene funktionieren:
 
-- [ ] **HTTP/1.1 & HTTP/2 Protokoll:** Verben (`GET`, `POST`, `PUT`, `DELETE`, `OPTIONS`), Statuscodes (2xx, 3xx, 4xx, 5xx), Request/Response-Header und Chunked Transfer Encoding.
-- [ ] **State & Sessions:** Cookies (Flags: `HttpOnly`, `Secure`, `SameSite=Strict/Lax/None`), JSON Web Tokens (JWT), LocalStorage vs. SessionStorage.
-- [ ] **Browser-Sicherheitsmodelle:**
-  - Same-Origin Policy (SOP): Schema, Host und Port.
-  - Cross-Origin Resource Sharing (CORS): `Access-Control-Allow-Origin`, Preflight-Requests.
-  - Content Security Policy (CSP): Direktiven, Nonces, Hashes und Bypass-Muster.
+- [x] **[Web-Fundamente: HTTP & Browser-Sicherheit](../glossary/web-sec-http-sop-cors-csp.md):**
+  - **HTTP/1.1 & HTTP/2:** Verben (`GET`, `POST`, `PUT`, `DELETE`), Statuscodes (2xx–5xx) und Header.
+  - **State & Sessions:** Cookie-Flags (`HttpOnly`, `Secure`, `SameSite=Strict/Lax/None`), Tokens.
+  - **Browser-Sicherheitsmodelle:** Same-Origin Policy (SOP), Cross-Origin Resource Sharing (CORS) und Content Security Policy (CSP).
 
 ---
 
@@ -59,10 +57,10 @@ Burp Suite ist der De-facto-Industriestandard für Web Application Penetration T
 - [x] **[Burp Suite Grundlagen](../glossary/burp-suite-basics.md):**
   - **Proxy & Intercept:** Einrichten des CA-Zertifikats im Browser, FoxyProxy, Match-and-Replace-Regeln.
   - **Repeater:** Manuelles Modifizieren, schnelles Replayen von Requests und Header-Fuzzing.
-  - **Intruder:** Automatisierte Angriffe mit Payload-Typen (Sniper, Battering Ram, Pitchfork, Cluster Bomb).
-  - **Decoder & Comparer:** Vergleichen von Antworten auf Byte-Ebene, Dekodieren von URL-, HTML- und Base64-Strings.
+  - **Intruder:** Automatisierte Angriffe mit den 4 Payload-Typen (Sniper, Battering Ram, Pitchfork, Cluster Bomb).
+  - **Decoder & Comparer:** Byte-by-Byte Differenzen, Dekodieren von URL-, HTML- und Base64-Strings.
   - **Burp Collaborator:** Detektion von Out-of-Band (OAST) Schwachstellen (DNS- und HTTP-Pingbacks).
-  - **BApp Store Extensions:** Nützliche Plugins (Autorize, Turbo Intruder, Hackvertor, Param Miner).
+  - **BApp Store Extensions:** Autorize, Turbo Intruder, Param Miner und Hackvertor.
 
 ---
 
@@ -71,13 +69,12 @@ Burp Suite ist der De-facto-Industriestandard für Web Application Penetration T
 Angriffe, die im Browser des Opfers ausgeführt werden:
 
 - [x] **[Cross-Site Scripting (XSS)](../glossary/web-sec-xss.md):**
-  - **Reflected XSS:** Payload wird unmittelbar in der Server-Antwort reflektiert.
-  - **Stored XSS:** Schadcode wird persistent in der Datenbank gespeichert (z. B. Kommentarfeld).
-  - **DOM-based XSS:** Schwachstellen direkt im clientseitigen JavaScript (Sources wie `location.search` und Sinks wie `innerHTML`, `eval()`).
-  - **WAF-Evasion & CSP-Bypasses:** HTML-Entity-Encoding, SVG-Attribute, Script-Gadgets.
-- [ ] **Cross-Site Request Forgery (CSRF):** Unbeabsichtigte Aktionen im Namen authentifizierter Opfer (Bypass von `SameSite`, fehlende CSRF-Tokens).
-- [ ] **Cross-Origin Resource Sharing (CORS) Misconfigurations:** Dynamische Spiegelung des `Origin`-Headers mit `Access-Control-Allow-Credentials: true`.
-- [ ] **Clickjacking:** UI-Redressing über unsichtbare `<iframe>`-Überlagerungen (Fehlender `X-Frame-Options` oder `frame-ancestors`-Header).
+  - Reflected, Stored und DOM-based XSS (JavaScript Sources vs. Sinks).
+  - WAF-Evasion, Polyglot-Payloads und CSP-Bypasses.
+- [x] **[CSRF, CORS-Misconfigurations & Clickjacking](../glossary/web-sec-client-side-advanced.md):**
+  - Cross-Site Request Forgery: Auto-Submit PoCs, Anti-CSRF-Tokens und `SameSite`-Cookies.
+  - CORS-Fehlkonfigurationen: Blind Reflection, Credentials-Leak und Null-Origin.
+  - Clickjacking: Transparente iFrame-Überlagerungen, `X-Frame-Options` und CSP `frame-ancestors`.
 
 ---
 
@@ -86,17 +83,22 @@ Angriffe, die im Browser des Opfers ausgeführt werden:
 Angriffe, die direkt den Server, dessen Datenbank oder das Backend-Netzwerk kompromittieren:
 
 - [x] **[SQL Injection (SQLi)](../glossary/web-sec-sqli.md):**
-  - **In-Band / Union-Based:** Daten direkt im Response-Body über `UNION SELECT` auslesen.
-  - **Error-Based:** Datenbank zwingen, sensible Daten in Fehlermeldungen preiszugeben.
-  - **Blind SQLi (Boolean-based & Time-based):** Extrahieren von Daten Bit für Bit anhand von Verhaltensänderungen oder künstlichen Pausen (`pg_sleep()`, `WAITFOR DELAY`).
+  - In-Band / Union-Based: Ermittlung von Spaltenzahl und Datentypen.
+  - Error-Based: Datenausgabe über erzwungene Konvertierungsfehler.
+  - Blind SQLi: Boolean-based und Time-based Extraktion (`pg_sleep()`, `WAITFOR DELAY`).
+  - Automatisierung mit `sqlmap` und Prepared Statements.
 - [x] **[Server-Side Request Forgery (SSRF)](../glossary/web-sec-ssrf.md):**
-  - Server zwingen, Requests an interne Systeme oder Cloud-Metadaten-Dienste (`http://169.254.169.254/latest/meta-data/`) zu senden.
-  - Bypasses: DNS Rebinding, IPv6-Repräsentationen, URL-Parsing-Inkonsistenzen.
+  - Auslesen interner Cloud-Metadaten (AWS EC2 IMDSv1 unter `169.254.169.254`).
+  - Filter-Bypasses: Dezimal-IPs, Hex, IPv6, DNS Rebinding und URL-Parsing-Tricks.
+  - Blind SSRF mit Burp Collaborator.
 - [x] **[Broken Access Control & IDOR](../glossary/web-sec-access-control-idor.md):**
-  - Insecure Direct Object References (IDOR): Ändern von Parameterwerten (`/api/users/1024` zu `/api/users/1025`) ohne Autorisierungsprüfung.
-  - Vertikale vs. horizontale Rechteausweitung (Privilege Escalation).
-- [ ] **Command Injection & Path Traversal:** Ausführen von Betriebssystembefehlen oder Auslesen sensibler Dateien (`/etc/passwd`, `win.ini`) über `../../`.
-- [ ] **Server-Side Template Injection (SSTI):** Codeausführung über Template-Engines (Jinja2, Twig, FreeMarker, Thymeleaf).
+  - Insecure Direct Object References (IDOR) in REST-APIs.
+  - Horizontale vs. vertikale Rechteausweitung (Privilege Escalation).
+  - Automatisierte Bypasses mit der *Autorize*-Extension.
+- [x] **[Command Injection, Path Traversal & SSTI](../glossary/web-sec-command-injection-ssti.md):**
+  - OS Command Injection: Shell-Separatoren (`;`, `&&`, `|`, Newline).
+  - Path Traversal: Auslesen von `/etc/passwd` und Bypasses für naive `../`-Filter.
+  - Server-Side Template Injection (SSTI): Detektion von Jinja2/Twig/FreeMarker bis zur Remote Code Execution (RCE).
 
 ---
 
@@ -104,9 +106,9 @@ Angriffe, die direkt den Server, dessen Datenbank oder das Backend-Netzwerk komp
 
 Schwachstellen, die nicht auf technischem Syntax-Fehlverhalten basieren, sondern auf fehlerhaften Annahmen im Entwickler-Design:
 
-- [ ] **Business Logic Flaws:** Negative Beträge im Warenkorb, Umgehung von zweistufigen Bestellprozessen, Rabattcode-Wiederverwendung.
-- [ ] **Authentication Flaws:** Brute-Force ohne Rate-Limiting, Password-Reset-Poisoning via `Host`-Header, unsichere Multi-Faktor-Authentifizierung (MFA Bypasses).
-- [ ] **JWT (JSON Web Token) Schwachstellen:** `alg: none` Angriffe, schwache HMAC-Secrets, Signature-Bypasses durch Key Confusion (`RS256` zu `HS256`).
+- [x] **[Business Logic Flaws & JWT-Schwachstellen](../glossary/web-sec-business-logic-jwt.md):**
+  - Business Logic Flaws: Negative Mengenangaben, Überspringen von Checkout-Schritten, Coupon Stacking.
+  - JWT-Angriffe: `alg: none`, Brute-Force schwacher HMAC-Secrets (`hashcat`) und Algorithm Confusion (RS256 zu HS256).
 
 ---
 
@@ -114,9 +116,10 @@ Schwachstellen, die nicht auf technischem Syntax-Fehlverhalten basieren, sondern
 
 Sicherheitslücken, die tiefes Verständnis von Proxies, Parsing und asynchroner Verarbeitung erfordern:
 
-- [ ] **HTTP Request Smuggling:** Desynchronisation zwischen Frontend-Reverse-Proxy und Backend über widersprüchliche `Content-Length`- und `Transfer-Encoding: chunked`-Header (CL.TE, TE.CL, TE.TE).
-- [ ] **Race Conditions (Limit Overrun):** Gleichzeitiges Senden von parallelen Requests in einem einzigen TCP-Paket (Single-Packet Attack via Turbo Intruder), um Gutscheine mehrfach einzulösen.
-- [ ] **Prototype Pollution (JavaScript):** Überschreiben von `Object.prototype` in Node.js-Backends oder im Client zur Remotecode-Ausführung oder XSS.
+- [x] **[Request Smuggling, Race Conditions & Prototype Pollution](../glossary/web-sec-advanced-attacks.md):**
+  - HTTP Request Smuggling: CL.TE und TE.CL Desynchronisation zwischen Frontend-Proxy und Backend.
+  - Race Conditions: Time-of-Check to Time-of-Use (TOCTOU) und Single-Packet Attacks mit Turbo Intruder.
+  - Prototype Pollution: Manipulation von `Object.prototype` in Node.js-Backends.
 
 ---
 
@@ -124,13 +127,11 @@ Sicherheitslücken, die tiefes Verständnis von Proxies, Parsing und asynchroner
 
 Bei echten Programmen (Scope: `*.target.com`) gewinnt oft derjenige, der neue oder vergessene Assets zuerst entdeckt:
 
-- [ ] **Asset Discovery (Subdomain Enumeration):**
-  - Passiv: Certificate Transparency Logs (`crt.sh`), Amass, Sublist3r.
-  - Aktiv: DNS Brute-Forcing (`puredns`, `shuffledns`), Permutationen (`altdns`).
-- [ ] **Port Scanning & Service Fingerprinting:** `nmap`, `masscan`, `naabu`, `httpx` (Herausfiltern aktiver Webserver).
-- [ ] **Content Discovery & Endpunktsuche:**
-  - Directory Brute-Forcing: `ffuf`, `feroxbuster` mit SecLists.
-  - JavaScript-Analyse: Extrahieren verborgener API-Endpunkte und API-Keys aus `.js`-Bundles (`katana`, `gau`, `waybackurls`).
-- [ ] **Parameter Fuzzing & Hidden Inputs:** `arjun`, Param Miner.
-- [ ] **Schwachstellen-Scanning mit Augenmaß:** `nuclei` mit maßgeschneiderten Templates für bekannte CVEs und Fehlkonfigurationen.
-- [ ] **Verantwortungsvolles Reporting:** Klare Reproduktionsschritte (PoC), Schadensnachweis (Impact) und Remediation-Tipps nach CVSS-Standard verfassen.
+- [x] **[Reconnaissance, Automatisierung & Reporting](../glossary/web-sec-recon-reporting.md):**
+  - Asset Discovery: Passiv (`crt.sh`, `subfinder`) und aktiv (`puredns`).
+  - HTTP Probing & Filterung: Aktive Webserver mit `httpx` ermitteln.
+  - Content Discovery: Schnelles Directory-Fuzzing mit `ffuf`.
+  - Endpunktextraktion aus JavaScript-Dateien (`katana`, `gau`).
+  - Versteckte Parameter finden mit `arjun`.
+  - Gezieltes Schwachstellen-Scanning mit `nuclei`.
+  - Professionelle Report-Struktur nach CVSS 3.1 für HackerOne und Bugcrowd.

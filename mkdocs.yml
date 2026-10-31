@@ -98,10 +98,16 @@ nav:
       - Bitweise Operationen & Bitmasken: glossary/bit-manipulation.md
       - Fortgeschrittene Baum-Techniken: glossary/advanced-tree-techniques.md
       - Burp Suite Grundlagen: glossary/burp-suite-basics.md
+      - Web-Fundamente (HTTP, SOP, CORS, CSP): glossary/web-sec-http-sop-cors-csp.md
+      - Client-Side (CSRF, CORS, Clickjacking): glossary/web-sec-client-side-advanced.md
       - Cross-Site Scripting (XSS): glossary/web-sec-xss.md
       - SQL Injection (SQLi): glossary/web-sec-sqli.md
       - Server-Side Request Forgery (SSRF): glossary/web-sec-ssrf.md
       - Broken Access Control & IDOR: glossary/web-sec-access-control-idor.md
+      - Command Injection, Path Traversal & SSTI: glossary/web-sec-command-injection-ssti.md
+      - Business Logic & JWT-Schwachstellen: glossary/web-sec-business-logic-jwt.md
+      - Request Smuggling & Race Conditions: glossary/web-sec-advanced-attacks.md
+      - Reconnaissance, Tools & Reporting: glossary/web-sec-recon-reporting.md
   - Lösungen:
       - LeetCode 1 (Two Sum): solutions/leetcode-1.md
       - LeetCode 2 (Add Two Numbers): solutions/leetcode-2.md

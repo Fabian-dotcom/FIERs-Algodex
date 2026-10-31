@@ -78,3 +78,10 @@ Diese Seite bietet eine strukturierte Übersicht aller Kernbegriffe, Datenstrukt
 | **SQL Injection (SQLi)** | Manipulation von Datenbankabfragen (Union, Error, Blind, Time-based) und Prepared Statements. | [SQL Injection (SQLi)](glossary/web-sec-sqli.md) |
 | **Server-Side Request Forgery (SSRF)** | Unautorisierte interne Requests durch den Webserver (Cloud-Metadaten, IMDS, OAST). | [Server-Side Request Forgery (SSRF)](glossary/web-sec-ssrf.md) |
 | **Broken Access Control & IDOR** | Fehlerhafte Berechtigungsprüfungen, Objekt-Level Autorisierung und Privilege Escalation. | [Broken Access Control & IDOR](glossary/web-sec-access-control-idor.md) |
+| **Command Injection & Path Traversal** | Ausführung von Shell-Befehlen und unbefugtes Auslesen von Systemdateien via `../`. | [Command Injection, Path Traversal & SSTI](glossary/web-sec-command-injection-ssti.md) |
+| **Server-Side Template Injection (SSTI)** | Codeausführung über Template-Engines (Jinja2, Twig, FreeMarker). | [Command Injection, Path Traversal & SSTI](glossary/web-sec-command-injection-ssti.md) |
+| **Business Logic Flaws** | Umgehung von Workflows, negative Preise und Coupon Stacking. | [Business Logic & JWT](glossary/web-sec-business-logic-jwt.md) |
+| **JWT-Schwachstellen** | `alg: none` Angriffe, schwache HMAC-Secrets und Algorithm Confusion. | [Business Logic & JWT](glossary/web-sec-business-logic-jwt.md) |
+| **HTTP Request Smuggling** | Desynchronisation zwischen Frontend-Proxy und Backend (CL.TE / TE.CL). | [Request Smuggling & Race Conditions](glossary/web-sec-advanced-attacks.md) |
+| **Race Conditions (TOCTOU)** | Gleichzeitige Anfragen und Single-Packet Attacks mit Turbo Intruder. | [Request Smuggling & Race Conditions](glossary/web-sec-advanced-attacks.md) |
+| **Bug Bounty Reconnaissance** | Asset Discovery, DNS Brute-Forcing, Content-Fuzzing (`ffuf`, `nuclei`) und CVSS-Reports. | [Reconnaissance & Reporting](glossary/web-sec-recon-reporting.md) |

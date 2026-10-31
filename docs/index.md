@@ -34,10 +34,16 @@ Hier findest du direkten Zugang zu den meistgenutzten Grundlagen und anspruchsvo
 === "Web Security & Bug Bounty"
 
     - **[Burp Suite Grundlagen](glossary/burp-suite-basics.md):** Proxy, Repeater, Intruder und BApp Extensions (Autorize, Turbo Intruder).
+    - **[Web-Fundamente (HTTP, SOP, CORS, CSP)](glossary/web-sec-http-sop-cors-csp.md):** HTTP-Verben, Same-Origin Policy, CORS-Header und Content Security Policy.
     - **[Cross-Site Scripting (XSS)](glossary/web-sec-xss.md):** Reflected, Stored und DOM-based XSS, Sources/Sinks und CSP.
+    - **[CSRF, CORS-Leaks & Clickjacking](glossary/web-sec-client-side-advanced.md):** Auto-Submit PoCs, Origin-Reflection und transparente iFrame-Überlagerungen.
     - **[SQL Injection (SQLi)](glossary/web-sec-sqli.md):** Union-Based, Error-Based und Blind SQLi (Boolean/Time) sowie Prepared Statements.
     - **[Server-Side Request Forgery (SSRF)](glossary/web-sec-ssrf.md):** Cloud-Metadaten (AWS IMDS), Filter-Bypasses und OAST.
     - **[Broken Access Control & IDOR](glossary/web-sec-access-control-idor.md):** Horizontale/vertikale Rechteausweitung und automatisierte Bypasses mit Autorize.
+    - **[Command Injection, Path Traversal & SSTI](glossary/web-sec-command-injection-ssti.md):** Shell-Injektionen, `/etc/passwd`-Traversal und Template-RCE.
+    - **[Business Logic & JWT-Schwachstellen](glossary/web-sec-business-logic-jwt.md):** Logikfehler, `alg: none` und Key Confusion.
+    - **[Request Smuggling & Race Conditions](glossary/web-sec-advanced-attacks.md):** CL.TE / TE.CL Desynchronisation und Single-Packet Attacks.
+    - **[Reconnaissance & Bug Bounty Reporting](glossary/web-sec-recon-reporting.md):** Asset Discovery (`subfinder`), Fuzzing (`ffuf`), `nuclei` und CVSS-Reports.
     - **[Lernpfad: Web Security & Bug Bounty](roadmaps/web-security.md):** Chronologischer Schritt-für-Schritt-Guide von PortSwigger bis Recon.
 
 === "Referenzen & Community"
@@ -86,11 +92,15 @@ Nutze diese interaktiven Checklisten, um deinen persönlichen Lernfortschritt st
 - [x] **[Graph Neural Networks (GNN)](glossary/gnn.md) & [PageRank](glossary/pagerank.md):** Message Passing und Power Iteration auf relationalen Graphen.
 
 ### 5. Web Security & Bug Bounty Hunting
+- [x] **[Web-Fundamente](glossary/web-sec-http-sop-cors-csp.md):** HTTP/1.1 & HTTP/2, Cookie-Sicherheit, Same-Origin Policy (SOP), CORS und CSP.
 - [x] **[Burp Suite Mastery](glossary/burp-suite-basics.md):** Proxy, Intercept, Repeater, Intruder und BApp Extensions.
-- [x] **[Client-Side Angriffe (XSS)](glossary/web-sec-xss.md):** Reflected, Stored und DOM-based XSS mit WAF-Evasion.
-- [x] **[Server-Side Angriffe (SQLi & SSRF)](glossary/web-sec-sqli.md):** Union-, Error- und Blind-Injections sowie Cloud-Metadaten-Extraktion.
+- [x] **[Client-Side Angriffe (XSS, CSRF, Clickjacking)](glossary/web-sec-xss.md):** Reflected/Stored/DOM XSS und [CSRF & Clickjacking](glossary/web-sec-client-side-advanced.md).
+- [x] **[Server-Side Angriffe (SQLi & SSRF)](glossary/web-sec-sqli.md):** Union-, Error- und Blind-Injections sowie Cloud-Metadaten-Extraktion via [SSRF](glossary/web-sec-ssrf.md).
+- [x] **[Systemzugriff (Command Injection, Path Traversal & SSTI)](glossary/web-sec-command-injection-ssti.md):** Shell-Injektionen und Template-RCE.
 - [x] **[Autorisierungsfehler (IDOR & Access Control)](glossary/web-sec-access-control-idor.md):** Objekt-Level Autorisierung und horizontal/vertikal Escalation.
-- [ ] **Reconnaissance & Automatisierung:** Asset Discovery, Fuzzing (`ffuf`), Endpunktextraktion und verantwortungsvolles Reporting.
+- [x] **[Business Logic & Authentifizierung (JWT)](glossary/web-sec-business-logic-jwt.md):** Logikfehler, `alg: none` und Signatur-Bypasses.
+- [x] **[Fortgeschritten: Request Smuggling & Race Conditions](glossary/web-sec-advanced-attacks.md):** CL.TE / TE.CL Desynchronisation und Single-Packet Attacks.
+- [x] **[Reconnaissance, Automatisierung & Reporting](glossary/web-sec-recon-reporting.md):** Asset Discovery (`subfinder`, `puredns`), Fuzzing (`ffuf`), `nuclei` und CVSS-Reports.
 
 ---
 
