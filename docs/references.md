@@ -66,3 +66,15 @@ Diese Seite bietet eine strukturierte Übersicht aller Kernbegriffe, Datenstrukt
 | **Römische Zahlen** | Additive und subtraktive Konvertierung (Greedy & Rückwärts-Traversierung). | [Römische Zahlen](glossary/roman-numerals.md) |
 | **Kalender- & Datumsarithmetik** | Gregorianische Schaltjahr-Regel und absolute Epochentage. | [Datums- & Kalender-Arithmetik](glossary/date-arithmetic.md) |
 | **Zyklische Permutationen** | Invarianzprüfung zyklischer Verschiebungen und minimale Sortierzüge. | [Zyklische Permutationen](glossary/cyclic-permutations.md) |
+
+---
+
+## Web Security & Bug Bounty Hunting
+
+| Begriff / Stichworte | Erklärung | Dokumentation |
+| :--- | :--- | :--- |
+| **Burp Suite (Proxy, Repeater, Intruder)** | Man-in-the-Middle HTTP-Proxy zum Abfangen, Manipulieren und Fuzzen von Web-Requests. | [Burp Suite Grundlagen](glossary/burp-suite-basics.md) |
+| **Cross-Site Scripting (XSS)** | Clientseitige Code-Ausführung (Reflected, Stored, DOM) im Browser des Opfers. | [Cross-Site Scripting (XSS)](glossary/web-sec-xss.md) |
+| **SQL Injection (SQLi)** | Manipulation von Datenbankabfragen (Union, Error, Blind, Time-based) und Prepared Statements. | [SQL Injection (SQLi)](glossary/web-sec-sqli.md) |
+| **Server-Side Request Forgery (SSRF)** | Unautorisierte interne Requests durch den Webserver (Cloud-Metadaten, IMDS, OAST). | [Server-Side Request Forgery (SSRF)](glossary/web-sec-ssrf.md) |
+| **Broken Access Control & IDOR** | Fehlerhafte Berechtigungsprüfungen, Objekt-Level Autorisierung und Privilege Escalation. | [Broken Access Control & IDOR](glossary/web-sec-access-control-idor.md) |

@@ -72,6 +72,7 @@ nav:
       - Arrays & Strings: roadmaps/arrays-strings.md
       - Dynamische Programmierung: roadmaps/dynamic-programming.md
       - Mathematik & Bit-Manipulation: roadmaps/math-bit-manipulation.md
+      - Web Security & Bug Bounty: roadmaps/web-security.md
   - Glossar:
       - Adjazenzliste: glossary/adjazenzliste.md
       - Adjazenzmatrix: glossary/adjazenzmatrix.md
@@ -96,6 +97,11 @@ nav:
       - Zyklische Permutationen: glossary/cyclic-permutations.md
       - Bitweise Operationen & Bitmasken: glossary/bit-manipulation.md
       - Fortgeschrittene Baum-Techniken: glossary/advanced-tree-techniques.md
+      - Burp Suite Grundlagen: glossary/burp-suite-basics.md
+      - Cross-Site Scripting (XSS): glossary/web-sec-xss.md
+      - SQL Injection (SQLi): glossary/web-sec-sqli.md
+      - Server-Side Request Forgery (SSRF): glossary/web-sec-ssrf.md
+      - Broken Access Control & IDOR: glossary/web-sec-access-control-idor.md
   - Lösungen:
       - LeetCode 1 (Two Sum): solutions/leetcode-1.md
       - LeetCode 2 (Add Two Numbers): solutions/leetcode-2.md

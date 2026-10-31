@@ -31,6 +31,15 @@ Hier findest du direkten Zugang zu den meistgenutzten Grundlagen und anspruchsvo
     - **[LeetCode 1851: Minimum Interval to Include Each Query](solutions/leetcode-1851.md):** Sweep-Line mit Min-Heap und Lazy Invalidation in $\mathcal{O}((n + k) \log(n + k))$.
     - **[LeetCode 4: Median of Two Sorted Arrays](solutions/leetcode-4.md):** Binäre Suche auf der Partitionierung zweier sortierter Arrays in $\mathcal{O}(\log(\min(m, n)))$.
 
+=== "Web Security & Bug Bounty"
+
+    - **[Burp Suite Grundlagen](glossary/burp-suite-basics.md):** Proxy, Repeater, Intruder und BApp Extensions (Autorize, Turbo Intruder).
+    - **[Cross-Site Scripting (XSS)](glossary/web-sec-xss.md):** Reflected, Stored und DOM-based XSS, Sources/Sinks und CSP.
+    - **[SQL Injection (SQLi)](glossary/web-sec-sqli.md):** Union-Based, Error-Based und Blind SQLi (Boolean/Time) sowie Prepared Statements.
+    - **[Server-Side Request Forgery (SSRF)](glossary/web-sec-ssrf.md):** Cloud-Metadaten (AWS IMDS), Filter-Bypasses und OAST.
+    - **[Broken Access Control & IDOR](glossary/web-sec-access-control-idor.md):** Horizontale/vertikale Rechteausweitung und automatisierte Bypasses mit Autorize.
+    - **[Lernpfad: Web Security & Bug Bounty](roadmaps/web-security.md):** Chronologischer Schritt-für-Schritt-Guide von PortSwigger bis Recon.
+
 === "Referenzen & Community"
 
     - **[Stichwort-Referenz (Keyword Index)](references.md):** Vollständiges alphabetisches Begriffsverzeichnis aller Algorithmen.
@@ -76,6 +85,13 @@ Nutze diese interaktiven Checklisten, um deinen persönlichen Lernfortschritt st
 - [ ] **Bitmask-DP:** Hamilton-Pfade und Traveling Salesperson Problem in $\mathcal{O}(2^n \cdot n^2)$.
 - [x] **[Graph Neural Networks (GNN)](glossary/gnn.md) & [PageRank](glossary/pagerank.md):** Message Passing und Power Iteration auf relationalen Graphen.
 
+### 5. Web Security & Bug Bounty Hunting
+- [x] **[Burp Suite Mastery](glossary/burp-suite-basics.md):** Proxy, Intercept, Repeater, Intruder und BApp Extensions.
+- [x] **[Client-Side Angriffe (XSS)](glossary/web-sec-xss.md):** Reflected, Stored und DOM-based XSS mit WAF-Evasion.
+- [x] **[Server-Side Angriffe (SQLi & SSRF)](glossary/web-sec-sqli.md):** Union-, Error- und Blind-Injections sowie Cloud-Metadaten-Extraktion.
+- [x] **[Autorisierungsfehler (IDOR & Access Control)](glossary/web-sec-access-control-idor.md):** Objekt-Level Autorisierung und horizontal/vertikal Escalation.
+- [ ] **Reconnaissance & Automatisierung:** Asset Discovery, Fuzzing (`ffuf`), Endpunktextraktion und verantwortungsvolles Reporting.
+
 ---
 
 ## Alle Lernpfade im Detail
@@ -84,6 +100,7 @@ Nutze diese interaktiven Checklisten, um deinen persönlichen Lernfortschritt st
 - **[Lernpfad: Arrays, Strings & Sequenz-Muster](roadmaps/arrays-strings.md):** Two Pointers, Sliding Window, Sweep-Line und Binäre Suche.
 - **[Lernpfad: Dynamische Programmierung (DP)](roadmaps/dynamic-programming.md):** Memoization, Tabulation, Knapsack und Zustandsräume.
 - **[Lernpfad: Mathematik & Bit-Manipulation](roadmaps/math-bit-manipulation.md):** Bitmasken, XOR-Tricks, Zahlenspiegelung und Kalenderarithmetik.
+- **[Lernpfad: Web Security & Bug Bounty](roadmaps/web-security.md):** Von HTTP-Grundlagen über Burp Suite bis hin zu OWASP Top 10 und Recon.
 
 ---
 

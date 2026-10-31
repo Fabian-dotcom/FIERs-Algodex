@@ -33,6 +33,14 @@ Hier werden alle neuen Algorithmen, Datenstrukturen, LeetCode-Lösungen und stru
 - **[Landau-Symbole & Big-O Notation](glossary/o-notation.md):**  
   Interaktives SVG-Wachstumsdiagramm und Sprungtabelle von $\mathcal{O}(1)$ bis $\mathcal{O}(n!)$.
 
+### Web Security & Bug Bounty
+- **[Lernpfad: Web Security & Bug Bounty Hunting](roadmaps/web-security.md):** Chronologischer Lernweg von PortSwigger-Labs über OWASP Top 10 bis hin zu Reconnaissance.
+- **[Burp Suite Grundlagen](glossary/burp-suite-basics.md):** Proxy, Repeater, Intruder, Decoder, Collaborator und BApp Extensions (Autorize, Turbo Intruder).
+- **[Cross-Site Scripting (XSS)](glossary/web-sec-xss.md):** Reflected, Stored und DOM-based XSS, Sources/Sinks, WAF-Evasion und CSP.
+- **[SQL Injection (SQLi)](glossary/web-sec-sqli.md):** Union-Based, Error-Based, Blind SQLi (Boolean/Time) und Prepared Statements.
+- **[Server-Side Request Forgery (SSRF)](glossary/web-sec-ssrf.md):** Cloud-Metadaten (AWS IMDS), IP-Filter-Bypasses, DNS Rebinding und Blind SSRF.
+- **[Broken Access Control & IDOR](glossary/web-sec-access-control-idor.md):** Horizontale/vertikale Rechteausweitung und automatisierte IDOR-Erkennung mit Autorize.
+
 ### Neue Lernpfade
 - **[Lernpfad: Arrays, Strings & Sequenz-Muster](roadmaps/arrays-strings.md):** Two Pointers, Sliding Window, Sweep-Line und Binäre Suche.
 - **[Lernpfad: Dynamische Programmierung (DP)](roadmaps/dynamic-programming.md):** Memoization, Tabulation, Knapsack und Zustandsräume.
