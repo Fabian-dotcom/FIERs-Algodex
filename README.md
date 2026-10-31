@@ -7,16 +7,16 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Fabian-dotcom/fiers-algodex/actions"><img src="https://github.com/Fabian-dotcom/fiers-algodex/actions/workflows/deploy.yml/badge.svg" alt="Deploy Status" /></a>
+  <a href="https://github.com/Fabian-dotcom/FIERs-Algodex/actions"><img src="https://github.com/Fabian-dotcom/FIERs-Algodex/actions/workflows/deploy.yml/badge.svg" alt="Deploy Status" /></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10+-3776AB.svg?logo=python&logoColor=white" alt="Python 3.10+" /></a>
   <a href="https://squidfunk.github.io/mkdocs-material/"><img src="https://img.shields.io/badge/Docs-MkDocs_Material-blue.svg" alt="MkDocs Material" /></a>
 </p>
 
 <p align="center">
-  <a href="https://fabian-dotcom.github.io/fiers-algodex/"><strong>Hier geht es zur Live-Website</strong></a> |
-  <a href="https://fabian-dotcom.github.io/fiers-algodex/red-algodex/"><strong>Red Algodex (Security Hub)</strong></a> |
-  <a href="https://fabian-dotcom.github.io/fiers-algodex/references/"><strong>Stichwort-Referenz (A-Z)</strong></a>
+  <a href="https://fabian-dotcom.github.io/FIERs-Algodex/"><strong>Hier geht es zur Live-Website</strong></a> |
+  <a href="https://fabian-dotcom.github.io/FIERs-Algodex/red-algodex/"><strong>Red Algodex (Security Hub)</strong></a> |
+  <a href="https://fabian-dotcom.github.io/FIERs-Algodex/references/"><strong>Stichwort-Referenz (A-Z)</strong></a>
 </p>
 
 <!-- Stylisches Banner -->
