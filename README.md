@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Fabian-dotcom/FIERs-Algodex/actions"><img src="https://github.com/Fabian-dotcom/FIERs-Algodex/actions/workflows/deploy.yml/badge.svg" alt="Deploy Status" /></a>
+  <a href="https://github.com/Fabian-dotcom/fiers-algodex/actions"><img src="https://github.com/Fabian-dotcom/fiers-algodex/actions/workflows/deploy.yml/badge.svg" alt="Deploy Status" /></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10+-3776AB.svg?logo=python&logoColor=white" alt="Python 3.10+" /></a>
   <a href="https://squidfunk.github.io/mkdocs-material/"><img src="https://img.shields.io/badge/Docs-MkDocs_Material-blue.svg" alt="MkDocs Material" /></a>
@@ -126,8 +126,10 @@ FIER's Algodex trennt fundamentale Informatik und offensive Sicherheit sauber in
 ### Red Algodex (Web Security & Bug Bounty)
 - **[Lernpfad: Web Security & Bug Bounty Hunting](https://fabian-dotcom.github.io/fiers-algodex/red-algodex/roadmaps/web-security/):** Chronologischer Stufenplan von HTTP-Basics über Burp Suite bis hin zu OWASP Top 10 und Recon.
 - **[Burp Suite Grundlagen & Proxy Mastery](https://fabian-dotcom.github.io/fiers-algodex/red-algodex/tools/burp-suite-basics/):** Intercept, Repeater, Intruder-Angriffstypen, Collaborator (OAST) und Autorize.
+- **[Cross-Site Scripting (XSS)](https://fabian-dotcom.github.io/fiers-algodex/red-algodex/vulnerabilities/xss/):** Reflected, Stored und DOM-based XSS, Sources/Sinks und CSP.
 - **[SQL Injection (SQLi)](https://fabian-dotcom.github.io/fiers-algodex/red-algodex/vulnerabilities/sqli/):** Union-Based, Error-Based, Blind SQLi (Boolean/Time) und Prepared Statements.
 - **[Server-Side Request Forgery (SSRF)](https://fabian-dotcom.github.io/fiers-algodex/red-algodex/vulnerabilities/ssrf/):** Cloud-Metadaten (AWS IMDS), Filter-Bypasses und OAST.
+- **[Broken Access Control & IDOR](https://fabian-dotcom.github.io/fiers-algodex/red-algodex/vulnerabilities/access-control-idor/):** Horizontale/vertikale Rechteausweitung und automatisierte Bypasses mit Autorize.
 
 ---
 
