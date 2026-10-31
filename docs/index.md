@@ -7,22 +7,89 @@ tags:
 
 # FIER's Algodex
 
-> Ein interaktives Entwickler-Wiki und Nachschlagewerk für **Algorithmen**, **Datenstrukturen** und **LeetCode-Lösungen in Python 3** – mit strikter Typisierung, mathematischen Komplexitätsanalysen und Diagrammen.
+<div style="background: linear-gradient(135deg, #1e1e2f 0%, #25283d 100%); border: 1px solid #3f51b5; border-radius: 12px; padding: 1.8rem 2rem; margin: 1rem 0 2rem 0; box-shadow: 0 4px 20px rgba(0,0,0,0.25);">
+  <h2 style="margin: 0 0 0.5rem 0; color: #ffffff; border: none; font-size: 1.5rem;">Willkommen im Steuerzentrum des Algodex</h2>
+  <p style="margin: 0 0 1.2rem 0; color: #b0bec5; font-size: 1.05rem; line-height: 1.5;">
+    Das interaktive Entwickler-Wiki für <strong>Algorithmen</strong>, <strong>Datenstrukturen</strong>, <strong>LeetCode-Lösungen in Python 3</strong> und <strong>Offensive Web Security</strong> – fundiert, präzise und in eigenen Worten.
+  </p>
+  <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+    <a href="roadmaps/graphs.md" class="md-button md-button--primary" style="font-weight: bold; padding: 0.6rem 1.2rem; border-radius: 6px;">
+      Core Algodex (Python & LeetCode)
+    </a>
+    <a href="red-algodex/index.md" class="md-button" style="background-color: #b71c1c; color: white; border: none; font-weight: bold; padding: 0.6rem 1.2rem; border-radius: 6px;">
+      Red Algodex (Security Hub)
+    </a>
+    <a href="references.md" class="md-button" style="font-weight: bold; padding: 0.6rem 1.2rem; border-radius: 6px;">
+      Stichwort-Referenz (A-Z)
+    </a>
+  </div>
+</div>
 
 ---
 
-## Plattform-Übersicht
+## Strukturierte Einstiegspfade (Geführte Routen)
 
-FIER's Wiki gliedert sich in zwei eigenständige, spezialisierte Fachbereiche:
+Wähle deinen passenden Pfad, um chronologisch und strukturiert durch die Inhalte geführt zu werden:
 
-| Bereich | Fokus & Themen | Einstiegspunkt |
-| :--- | :--- | :--- |
-| **FIER's Algodex** | Datenstrukturen, Algorithmen, Komplexität & LeetCode-Lösungen | [Startseite](index.md) (Aktuell hier) |
-| **FIER's Red Algodex** | Web Security, PortSwigger-Techniken, OWASP Top 10 & Bug Bounties | [Red Algodex Startseite](red-algodex/index.md) |
+<div class="grid cards" markdown>
+
+-   **Coding Interview Vorbereitung**
+
+    ---
+
+    Der kompakte Weg durch die unverzichtbaren Algorithmenmuster für technische Interviews.
+    
+    1. [Landau-Symbole & Big-O Notation](glossary/o-notation.md)
+    2. [Hash Map & Two Sum Komplement](glossary/hash-map.md)
+    3. [Schiebefenster (Sliding Window)](glossary/sliding-window.md)
+    4. [Binäre Suche & Partitionierung](glossary/binary-search.md)
+    
+    [:octicons-arrow-right-24: Zum Lernpfad Arrays & Strings](roadmaps/arrays-strings.md)
+
+-   **Graphentheorie & Bäume von 0 auf 100**
+
+    ---
+
+    Von der Speicherung im Speicher bis zu fortgeschrittenen Baum- und Pfadtechniken.
+    
+    1. [Adjazenzliste](glossary/adjazenzliste.md) & [CSR-Format](glossary/csr-format.md)
+    2. [Graph-Traversierung (BFS & DFS)](glossary/traversierung-bfs-dfs.md)
+    3. [Zustandsbasierter Dijkstra](glossary/state-space-dijkstra.md)
+    4. [Binary Lifting & LCA](glossary/advanced-tree-techniques.md)
+    
+    [:octicons-arrow-right-24: Zum Lernpfad Graphen & Bäume](roadmaps/graphs.md)
+
+-   **Web Security & Bug Bounty Basics**
+
+    ---
+
+    Einstieg in Offensive Security nach PortSwigger- und OWASP-Standards im Red Algodex.
+    
+    1. [Web-Fundamente (HTTP, SOP, CORS, CSP)](red-algodex/vulnerabilities/http-sop-cors-csp.md)
+    2. [Burp Suite Grundlagen & Proxy Mastery](red-algodex/tools/burp-suite-basics.md)
+    3. [Cross-Site Scripting (XSS)](red-algodex/vulnerabilities/xss.md)
+    4. [SQL Injection (SQLi)](red-algodex/vulnerabilities/sqli.md)
+    
+    [:octicons-arrow-right-24: Zum Red Algodex Security Hub](red-algodex/index.md)
+
+-   **Diskrete Mathematik & Bit-Tricks**
+
+    ---
+
+    Hocheffiziente Problemlösungen auf Byte-Ebene in extrem wenigen CPU-Zyklen.
+    
+    1. [Bitweise Operationen & Bitmasken](glossary/bit-manipulation.md)
+    2. [Palindrom-Bit-Trick in O(1)](glossary/bit-manipulation.md)
+    3. [Mathematische Zahlenumkehr](glossary/math-number-reversal.md)
+    4. [Zyklische Permutationen](glossary/cyclic-permutations.md)
+    
+    [:octicons-arrow-right-24: Zum Lernpfad Mathematik & Bits](roadmaps/math-bit-manipulation.md)
+
+</div>
 
 ---
 
-## Schnellzugriff (Quick-Access Cards)
+## Schnellzugriff (Quick-Access)
 
 === "Konzepte & Datenstrukturen"
 
@@ -56,18 +123,6 @@ FIER's Wiki gliedert sich in zwei eigenständige, spezialisierte Fachbereiche:
     - **[Changelog (What's New)](changelog.md):** Chronologische Übersicht über neue Algorithmen, Lernpfade und Features.
     - **[GitHub Repository](https://github.com/Fabian-dotcom/fiers-algodex):** Sourcecode, Issues und Beitragsrichtlinien.
     - **[GitHub Sponsor / Buy me a coffee](https://github.com/sponsors/Fabian-dotcom):** Unterstütze die Weiterentwicklung dieses Wikis.
-
----
-
-## Die Lernpfade
-
-Die detaillierten Checklisten und Stufenpläne findest du auf den jeweiligen Lernpfad-Seiten:
-
-- **[Lernpfad: Graphen & Bäume](roadmaps/graphs.md):** Repräsentation (Adjazenzliste, Matrix, CSR), Traversierung (BFS/DFS), Kürzeste Pfade, Euler-Tour und LCA.
-- **[Lernpfad: Arrays, Strings & Sequenz-Muster](roadmaps/arrays-strings.md):** Two Pointers, Sliding Window, Sweep-Line und Binäre Suche.
-- **[Lernpfad: Dynamische Programmierung (DP)](roadmaps/dynamic-programming.md):** Memoization, Tabulation, Knapsack und Zustandsräume.
-- **[Lernpfad: Mathematik & Bit-Manipulation](roadmaps/math-bit-manipulation.md):** Bitmasken, XOR-Tricks, Zahlenspiegelung und Kalenderarithmetik.
-- **[Lernpfad: Web Security & Bug Bounty](red-algodex/roadmaps/web-security.md):** Chronologischer Stufenplan von HTTP-Basics über Burp Suite bis hin zu OWASP Top 10 und Recon.
 
 ---
 

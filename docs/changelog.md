@@ -7,13 +7,41 @@ tags:
 
 # Changelog & Was ist neu?
 
-Hier werden alle neuen Algorithmen, Datenstrukturen, LeetCode-Lösungen und strukturellen Erweiterungen des Algodex chronologisch dokumentiert.
+Hier werden alle neuen Algorithmen, Datenstrukturen, LeetCode-Lösungen, Security-Konzepte und Plattform-Erweiterungen des Algodex chronologisch dokumentiert.
+
+---
+
+## 31. Oktober 2026
+
+### Plattform-Architektur & UX-Relaunch
+- **Interaktives Steuerzentrum auf der Startseite ([`docs/index.md`](index.md)):**  
+  Hero-Section mit direkten Aktions-Buttons und vier geführten Einstiegspfaden (*Coding Interview Vorbereitung*, *Graphentheorie von 0 auf 100*, *Web Security Basics*, *Diskrete Mathematik & Bits*).
+- **Entkopplung von FIER's Red Algodex ([`docs/red-algodex/`](red-algodex/index.md)):**  
+  Vollständig eigenständiger Bereich für Offensive Security & Bug Bounty Hunting mit eigener Navigation, eigener Farbakzentuierung (`red-theme.css`) und klarer Trennung vom Algorithmen-Core.
+- **Kategorisierte Sidebar & Material-Tabs in `mkdocs.yml`:**  
+  Strukturierung des Glossars in aufklappbare Unterkategorien (*Graphentheorie*, *Lineare Strukturen & Suche*, *Diskrete Mathematik & Bits*, *System & Performance*).
+- **Aussagekräftige GitHub README & Banner:**  
+  Neues responsives SVG-Header-Banner für GitHub mit Direktverlinkung auf beide Live-Hubs und vollständiger Lösungsmatrix.
+
+### Web Security & Bug Bounty (Red Algodex)
+- **[Lernpfad: Web Security & Bug Bounty Hunting](red-algodex/roadmaps/web-security.md):** Chronologischer Lernweg von PortSwigger-Labs über OWASP Top 10 bis hin zu Reconnaissance.
+- **[Burp Suite Grundlagen](red-algodex/tools/burp-suite-basics.md):** Proxy, Repeater, Intruder, Decoder, Collaborator und BApp Extensions (Autorize, Turbo Intruder).
+- **[Web-Fundamente](red-algodex/vulnerabilities/http-sop-cors-csp.md):** HTTP/1.1 & HTTP/2, Cookie-Sicherheit (`HttpOnly`, `SameSite`), Same-Origin Policy (SOP), CORS und CSP.
+- **[Client-Side Angriffe](red-algodex/vulnerabilities/client-side-advanced.md):** CSRF mit Auto-Submit PoCs, CORS Misconfigurations und Clickjacking via `<iframe>`.
+- **[Cross-Site Scripting (XSS)](red-algodex/vulnerabilities/xss.md):** Reflected, Stored und DOM-based XSS, Sources/Sinks, WAF-Evasion und CSP.
+- **[SQL Injection (SQLi)](red-algodex/vulnerabilities/sqli.md):** Union-Based, Error-Based, Blind SQLi (Boolean/Time) und Prepared Statements.
+- **[Server-Side Request Forgery (SSRF)](red-algodex/vulnerabilities/ssrf.md):** Cloud-Metadaten (AWS IMDS), IP-Filter-Bypasses, DNS Rebinding und Blind SSRF.
+- **[Broken Access Control & IDOR](red-algodex/vulnerabilities/access-control-idor.md):** Horizontale/vertikale Rechteausweitung und automatisierte IDOR-Erkennung mit Autorize.
+- **[Command Injection, Path Traversal & SSTI](red-algodex/vulnerabilities/command-injection-ssti.md):** Shell-Injektionen, `/etc/passwd`-Traversal und Template-RCE.
+- **[Business Logic & JWT-Schwachstellen](red-algodex/vulnerabilities/business-logic-jwt.md):** Logikfehler im Checkout, `alg: none` Angriffe und Key Confusion.
+- **[Request Smuggling & Race Conditions](red-algodex/vulnerabilities/advanced-attacks.md):** CL.TE / TE.CL Desynchronisation und Single-Packet Attacks.
+- **[Reconnaissance & Bug Bounty Reporting](red-algodex/tools/recon-reporting.md):** Asset Discovery (`subfinder`, `puredns`), Fuzzing (`ffuf`), `nuclei` und CVSS-Reports.
 
 ---
 
 ## 30. Oktober 2026
 
-### Neue Algorithmen & Glossar-Konzepte
+### Core Algorithmen & Datenstrukturen
 - **[Zustandsbasierter Dijkstra (State-Space Dijkstra)](glossary/state-space-dijkstra.md):**  
   Erweiterung des Dijkstra-Algorithmus um Pfad-Historien und Zustandsraum-Reduktion `(u, last_char, count)`.
 - **[CSR-Format (Compressed Sparse Row)](glossary/csr-format.md):**  
@@ -33,39 +61,11 @@ Hier werden alle neuen Algorithmen, Datenstrukturen, LeetCode-Lösungen und stru
 - **[Landau-Symbole & Big-O Notation](glossary/o-notation.md):**  
   Interaktives SVG-Wachstumsdiagramm und Sprungtabelle von $\mathcal{O}(1)$ bis $\mathcal{O}(n!)$.
 
-### Web Security & Bug Bounty (Red Algodex)
-- **[Lernpfad: Web Security & Bug Bounty Hunting](red-algodex/roadmaps/web-security.md):** Chronologischer Lernweg von PortSwigger-Labs über OWASP Top 10 bis hin zu Reconnaissance.
-- **[Burp Suite Grundlagen](red-algodex/tools/burp-suite-basics.md):** Proxy, Repeater, Intruder, Decoder, Collaborator und BApp Extensions (Autorize, Turbo Intruder).
-- **[Cross-Site Scripting (XSS)](red-algodex/vulnerabilities/xss.md):** Reflected, Stored und DOM-based XSS, Sources/Sinks, WAF-Evasion und CSP.
-- **[SQL Injection (SQLi)](red-algodex/vulnerabilities/sqli.md):** Union-Based, Error-Based, Blind SQLi (Boolean/Time) und Prepared Statements.
-- **[Server-Side Request Forgery (SSRF)](red-algodex/vulnerabilities/ssrf.md):** Cloud-Metadaten (AWS IMDS), IP-Filter-Bypasses, DNS Rebinding und Blind SSRF.
-- **[Broken Access Control & IDOR](red-algodex/vulnerabilities/access-control-idor.md):** Horizontale/vertikale Rechteausweitung und automatisierte IDOR-Erkennung mit Autorize.
+### Core Lernpfade
+- **[Lernpfad: Graphen & Bäume](roadmaps/graphs.md)**
+- **[Lernpfad: Arrays, Strings & Sequenz-Muster](roadmaps/arrays-strings.md)**
+- **[Lernpfad: Dynamische Programmierung (DP)](roadmaps/dynamic-programming.md)**
+- **[Lernpfad: Mathematik & Bit-Manipulation](roadmaps/math-bit-manipulation.md)**
 
-### Neue Lernpfade
-- **[Lernpfad: Arrays, Strings & Sequenz-Muster](roadmaps/arrays-strings.md):** Two Pointers, Sliding Window, Sweep-Line und Binäre Suche.
-- **[Lernpfad: Dynamische Programmierung (DP)](roadmaps/dynamic-programming.md):** Memoization, Tabulation, Knapsack und Zustandsräume.
-- **[Lernpfad: Mathematik & Bit-Manipulation](roadmaps/math-bit-manipulation.md):** Bitmasken, Akkumulierendes Bit-AND und Prefix-XOR.
-
-### Neue LeetCode-Lösungen
-- **[LeetCode 3970: Shortest Path With At Most K Consecutive Identical Characters](solutions/leetcode-3970.md)** (Hard)
-- **[LeetCode 3963: Create Grid With Exactly One Path](solutions/leetcode-3963.md)** (Medium)
-- **[LeetCode 3942: Minimum Operations to Sort a Permutation](solutions/leetcode-3942.md)** (Medium)
-- **[LeetCode 3841: Palindromic Path Queries in a Tree](solutions/leetcode-3841.md)** (Hard)
-- **[LeetCode 3644: Maximum K to Sort a Permutation](solutions/leetcode-3644.md)** (Medium)
-- **[LeetCode 3619: Count Islands With Total Value Divisible by K](solutions/leetcode-3619.md)** (Medium)
-- **[LeetCode 2409: Count Days Spent Together](solutions/leetcode-2409.md)** (Easy)
-- **[LeetCode 1851: Minimum Interval to Include Each Query](solutions/leetcode-1851.md)** (Hard)
-- **[LeetCode 1360: Number of Days Between Two Dates](solutions/leetcode-1360.md)** (Easy)
-- **[LeetCode 1254: Number of Closed Islands](solutions/leetcode-1254.md)** (Medium)
-- **[LeetCode 13: Roman to Integer](solutions/leetcode-13.md)** (Easy)
-- **[LeetCode 12: Integer to Roman](solutions/leetcode-12.md)** (Medium)
-- **[LeetCode 9: Palindrome Number](solutions/leetcode-9.md)** (Easy)
-- **[LeetCode 4: Median of Two Sorted Arrays](solutions/leetcode-4.md)** (Hard)
-- **[LeetCode 3: Longest Substring Without Repeating Characters](solutions/leetcode-3.md)** (Medium)
-- **[LeetCode 2: Add Two Numbers](solutions/leetcode-2.md)** (Medium)
-- **[LeetCode 1: Two Sum](solutions/leetcode-1.md)** (Easy)
-
-### System- & UI-Erweiterungen
-- **Zentrale Stichwort-Referenz ([`docs/references.md`](references.md)):** Alphabetischer Index aller behandelten Themen.
-- **Quick-Access Cards & Interaktive Roadmaps:** Startseite bietet direkten Absprung und Todo-Checklisten.
-- **Cross-Linking:** Kontextsensitive Verlinkung aller Fachbegriffe ohne Selbstreferenzen.
+### Dokumentierte LeetCode-Lösungen
+- 18 vollständig ausgearbeitete Lösungen inklusive Type Hints, Mermaid-Diagrammen und Komplexitätsanalysen (LC 1, 2, 3, 4, 9, 12, 13, 1254, 1360, 1851, 2409, 2791, 3619, 3644, 3841, 3942, 3963, 3970).
