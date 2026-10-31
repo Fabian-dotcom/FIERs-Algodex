@@ -1,0 +1,28 @@
+/* FIER's Red Algodex Styling */
+/* Wenn eine Seite im Pfad 'red-algodex' liegt, wird die Akzent- und Primärfarbe rot akzentuiert */
+
+/* Anpassung der Header-Farbe und Navigation für Red Algodex */
+body:has([href*="red-algodex"].md-nav__link--active),
+body:has([data-md-component="navigation"] [href*="red-algodex"].md-nav__link--active) {
+  --md-primary-fg-color: #b71c1c;
+  --md-primary-fg-color--light: #d32f2f;
+  --md-primary-fg-color--dark: #7f0000;
+  --md-accent-fg-color: #ff5252;
+}
+
+/* Rote Akzente bei aktiven Links im Red Algodex */
+.md-nav__item:has([href*="red-algodex"]) .md-nav__link--active {
+  color: #d32f2f !important;
+  font-weight: bold;
+}
+
+/* Rote Badges und Hervorhebungen */
+.red-badge {
+  background-color: #b71c1c;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: bold;
+  display: inline-block;
+}
