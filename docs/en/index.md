@@ -102,7 +102,7 @@ High-performance problem solving at the bit level in minimal CPU cycles.
 
     - [Keyword Reference Index](references.md) – Alphabetical index of all documented concepts.
     - [Changelog (What's New)](changelog.md) – Chronological release history of algorithms and features.
-    - [GitHub Repository](https://github.com/Fabian-dotcom/fiers-algodex) – Source code, issues, and contribution guidelines.
+    - [GitHub Repository](https://github.com/Fabian-dotcom/FIERs-Algodex) – Source code, issues, and contribution guidelines.
     - [GitHub Sponsor / Buy me a coffee](https://github.com/sponsors/Fabian-dotcom) – Support continuous maintenance.
 
 ---

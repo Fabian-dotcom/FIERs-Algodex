@@ -102,7 +102,7 @@ Hocheffiziente Problemlösungen auf Byte-Ebene in extrem wenigen CPU-Zyklen.
 
     - [Stichwort-Referenz (Keyword Index)](references.md) – Vollständiges alphabetisches Begriffsverzeichnis aller Algorithmen.
     - [Changelog (What's New)](changelog.md) – Chronologische Übersicht über neue Algorithmen, Lernpfade und Features.
-    - [GitHub Repository](https://github.com/Fabian-dotcom/fiers-algodex) – Sourcecode, Issues und Beitragsrichtlinien.
+    - [GitHub Repository](https://github.com/Fabian-dotcom/FIERs-Algodex) – Sourcecode, Issues und Beitragsrichtlinien.
     - [GitHub Sponsor / Buy me a coffee](https://github.com/sponsors/Fabian-dotcom) – Unterstütze die Weiterentwicklung dieses Wikis.
 
 ---

@@ -99,8 +99,8 @@ FIER's Algodex trennt fundamentale Informatik und offensive Sicherheit sauber in
 
 | Bereich | Themen & Inhalte | Link |
 | :--- | :--- | :--- |
-| **Core Algodex** | Datenstrukturen, Graphentheorie, Dynamische Programmierung & 18 LeetCode-Lösungen | [Live öffnen](https://fabian-dotcom.github.io/fiers-algodex/) |
-| **Red Algodex** | PortSwigger-Labs, OWASP Top 10, Burp Suite Mastery, Reconnaissance & Bounties | [Live öffnen](https://fabian-dotcom.github.io/fiers-algodex/red-algodex/) |
+| **Core Algodex** | Datenstrukturen, Graphentheorie, Dynamische Programmierung & 18 LeetCode-Lösungen | [Live öffnen](https://fabian-dotcom.github.io/FIERs-Algodex/) |
+| **Red Algodex** | PortSwigger-Labs, OWASP Top 10, Burp Suite Mastery, Reconnaissance & Bounties | [Live öffnen](https://fabian-dotcom.github.io/FIERs-Algodex/red-algodex/) |
 
 ---
 
@@ -118,18 +118,18 @@ FIER's Algodex trennt fundamentale Informatik und offensive Sicherheit sauber in
 ## Vorzeige-Artikel & Einstiegspunkte
 
 ### Core Algodex (Informatik & Algorithmen)
-- **[Zustandsbasierter Dijkstra (State-Space Dijkstra)](https://fabian-dotcom.github.io/fiers-algodex/glossary/state-space-dijkstra/):** Pfadsuche mit Historien und Zustandsraum-Reduktion in $\mathcal{O}((E \cdot S) \log(V \cdot S))$.
-- **[CSR-Format (Compressed Sparse Row)](https://fabian-dotcom.github.io/fiers-algodex/glossary/csr-format/):** Flache 1D-Arrays für Graphen und Sparse-Matrizen zur Vermeidung von Pointer-Overhead.
-- **[Landau-Symbole & Big-O Notation](https://fabian-dotcom.github.io/fiers-algodex/glossary/o-notation/):** Interaktiver SVG-Wachstumsvergleich und Sprungtabelle von $\mathcal{O}(1)$ bis $\mathcal{O}(n!)$.
-- **[Fortgeschrittene Baum-Techniken](https://fabian-dotcom.github.io/fiers-algodex/glossary/advanced-tree-techniques/):** Lowest Common Ancestor (LCA) via Binary Lifting in $\mathcal{O}(\log n)$, Euler-Tour und Fenwick-Bäume.
+- **[Zustandsbasierter Dijkstra (State-Space Dijkstra)](https://fabian-dotcom.github.io/FIERs-Algodex/glossary/state-space-dijkstra/):** Pfadsuche mit Historien und Zustandsraum-Reduktion in $\mathcal{O}((E \cdot S) \log(V \cdot S))$.
+- **[CSR-Format (Compressed Sparse Row)](https://fabian-dotcom.github.io/FIERs-Algodex/glossary/csr-format/):** Flache 1D-Arrays für Graphen und Sparse-Matrizen zur Vermeidung von Pointer-Overhead.
+- **[Landau-Symbole & Big-O Notation](https://fabian-dotcom.github.io/FIERs-Algodex/glossary/o-notation/):** Interaktiver SVG-Wachstumsvergleich und Sprungtabelle von $\mathcal{O}(1)$ bis $\mathcal{O}(n!)$.
+- **[Fortgeschrittene Baum-Techniken](https://fabian-dotcom.github.io/FIERs-Algodex/glossary/advanced-tree-techniques/):** Lowest Common Ancestor (LCA) via Binary Lifting in $\mathcal{O}(\log n)$, Euler-Tour und Fenwick-Bäume.
 
 ### Red Algodex (Web Security & Bug Bounty)
-- **[Lernpfad: Web Security & Bug Bounty Hunting](https://fabian-dotcom.github.io/fiers-algodex/red-algodex/roadmaps/web-security/):** Chronologischer Stufenplan von HTTP-Basics über Burp Suite bis hin zu OWASP Top 10 und Recon.
-- **[Burp Suite Grundlagen & Proxy Mastery](https://fabian-dotcom.github.io/fiers-algodex/red-algodex/tools/burp-suite-basics/):** Intercept, Repeater, Intruder-Angriffstypen, Collaborator (OAST) und Autorize.
-- **[Cross-Site Scripting (XSS)](https://fabian-dotcom.github.io/fiers-algodex/red-algodex/vulnerabilities/xss/):** Reflected, Stored und DOM-based XSS, Sources/Sinks und CSP.
-- **[SQL Injection (SQLi)](https://fabian-dotcom.github.io/fiers-algodex/red-algodex/vulnerabilities/sqli/):** Union-Based, Error-Based, Blind SQLi (Boolean/Time) und Prepared Statements.
-- **[Server-Side Request Forgery (SSRF)](https://fabian-dotcom.github.io/fiers-algodex/red-algodex/vulnerabilities/ssrf/):** Cloud-Metadaten (AWS IMDS), Filter-Bypasses und OAST.
-- **[Broken Access Control & IDOR](https://fabian-dotcom.github.io/fiers-algodex/red-algodex/vulnerabilities/access-control-idor/):** Horizontale/vertikale Rechteausweitung und automatisierte Bypasses mit Autorize.
+- **[Lernpfad: Web Security & Bug Bounty Hunting](https://fabian-dotcom.github.io/FIERs-Algodex/red-algodex/roadmaps/web-security/):** Chronologischer Stufenplan von HTTP-Basics über Burp Suite bis hin zu OWASP Top 10 und Recon.
+- **[Burp Suite Grundlagen & Proxy Mastery](https://fabian-dotcom.github.io/FIERs-Algodex/red-algodex/tools/burp-suite-basics/):** Intercept, Repeater, Intruder-Angriffstypen, Collaborator (OAST) und Autorize.
+- **[Cross-Site Scripting (XSS)](https://fabian-dotcom.github.io/FIERs-Algodex/red-algodex/vulnerabilities/xss/):** Reflected, Stored und DOM-based XSS, Sources/Sinks und CSP.
+- **[SQL Injection (SQLi)](https://fabian-dotcom.github.io/FIERs-Algodex/red-algodex/vulnerabilities/sqli/):** Union-Based, Error-Based, Blind SQLi (Boolean/Time) und Prepared Statements.
+- **[Server-Side Request Forgery (SSRF)](https://fabian-dotcom.github.io/FIERs-Algodex/red-algodex/vulnerabilities/ssrf/):** Cloud-Metadaten (AWS IMDS), Filter-Bypasses und OAST.
+- **[Broken Access Control & IDOR](https://fabian-dotcom.github.io/FIERs-Algodex/red-algodex/vulnerabilities/access-control-idor/):** Horizontale/vertikale Rechteausweitung und automatisierte Bypasses mit Autorize.
 
 ---
 
@@ -188,7 +188,7 @@ Voraussetzung: Python 3.10+
 
 ```bash
 # Repository klonen
-git clone https://github.com/Fabian-dotcom/fiers-algodex.git
+git clone https://github.com/Fabian-dotcom/FIERs-Algodex.git
 cd fiers-algodex
 
 # MkDocs Material installieren

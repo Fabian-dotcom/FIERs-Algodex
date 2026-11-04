@@ -1,9 +1,9 @@
 site_name: FIER's Algodex
-site_url: https://Fabian-dotcom.github.io/fiers-algodex/en/
+site_url: https://Fabian-dotcom.github.io/FIERs-Algodex/en/
 site_description: Personal developer wiki & reference guide for algorithms, data structures, LeetCode solutions, and web security.
 site_author: Fabian (FIER)
-repo_url: https://github.com/Fabian-dotcom/fiers-algodex
-repo_name: fiers-algodex
+repo_url: https://github.com/Fabian-dotcom/FIERs-Algodex
+repo_name: FIERs-Algodex
 
 docs_dir: docs/en
 
@@ -41,10 +41,10 @@ theme:
 extra:
   alternate:
     - name: Deutsch
-      link: /fiers-algodex/de/
+      link: /FIERs-Algodex/de/
       lang: de
     - name: English
-      link: /fiers-algodex/en/
+      link: /FIERs-Algodex/en/
       lang: en
 
 extra_css:
