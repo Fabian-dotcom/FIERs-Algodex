@@ -14,6 +14,12 @@ Hier werden alle neuen Algorithmen, Datenstrukturen, LeetCode-Lösungen, Securit
 ## 31. Oktober 2026
 
 ### Plattform-Architektur & UX-Relaunch
+- **[Constraint-Driven Design](glossary/constraint-driven-design.md):**  
+  Analyse asymmetrischer Grenzen ($k \le 15$ vs. $n = 10^5$) als direkter Indikator für Bitmask-DP und Zustandsraum-Erweiterung.
+- **[Ein-Pass-Optimierung durch algebraische Umformung](glossary/algebraic-one-pass.md):**  
+  Umformen doppelter Durchläufe in geschlossene algebraische Formeln ($\sum x_i - n \cdot \min$).
+- **[Speicherschonende Generator-Ausdrücke](glossary/generator-expressions.md):**  
+  Echter $\mathcal{O}(1)$-Speicherbedarf durch Lazy Evaluation in `sum()`, `min()`, `max()`, `any()`, `all()`.
 - **Interaktives Steuerzentrum auf der Startseite ([`docs/index.md`](index.md)):**  
   Hero-Section mit direkten Aktions-Buttons und vier geführten Einstiegspfaden (*Coding Interview Vorbereitung*, *Graphentheorie von 0 auf 100*, *Web Security Basics*, *Diskrete Mathematik & Bits*).
 - **Entkopplung von FIER's Red Algodex ([`docs/red-algodex/`](red-algodex/index.md)):**  

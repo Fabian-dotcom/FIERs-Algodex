@@ -60,6 +60,9 @@ Diese Seite bietet eine strukturierte Übersicht aller Kernbegriffe, Datenstrukt
 | Begriff / Stichworte | Erklärung | Dokumentation |
 | :--- | :--- | :--- |
 | **Landau-Symbole (Big-O Notation)** | Asymptotische Laufzeit- und Speicherkomplexität ($\mathcal{O}(1), \mathcal{O}(\log n), \dots$). | [Landau-Symbole & Big-O](glossary/o-notation.md) |
+| **Ein-Pass durch algebraische Umformung** | Reduktion von Schleifen durch mathematische Summen-Umformung. | [Algebraische Ein-Pass-Optimierung](glossary/algebraic-one-pass.md) |
+| **Speicherschonende Generatoren** | Lazy Evaluation in `sum()`, `min()`, `max()` für echten $\mathcal{O}(1)$-Speicherbedarf. | [Generator-Ausdrücke](glossary/generator-expressions.md) |
+| **Constraint-Driven Design** | Asymmetrisch kleine Parametergrenzen als direkter Indikator für den Zielalgorithmus. | [Constraint-Driven Design](glossary/constraint-driven-design.md) |
 | **Bitmasken & Bitweises XOR** | Kompakte Speicherung von Flags und Paritätsberechnungen in $\mathcal{O}(1)$. | [Bitweise Operationen](glossary/bit-manipulation.md) |
 | **Palindrom-Bit-Trick** | Prüfung auf höchstens ein gesetztes Bit via `mask & (mask - 1) == 0`. | [Bitweise Operationen](glossary/bit-manipulation.md) |
 | **Mathematische Zahlenumkehr** | Ziffernextraktion über Modulo/Division ohne String-Allokation. | [Mathematische Zahlenumkehr](glossary/math-number-reversal.md) |

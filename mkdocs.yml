@@ -98,6 +98,7 @@ nav:
               - Min-Heap & Sweep-Line: glossary/min-heap-sweep-line.md
           - Diskrete Mathematik & Bits:
               - Landau-Symbole (Big-O): glossary/o-notation.md
+              - Ein-Pass durch algebraische Umformung: glossary/algebraic-one-pass.md
               - Bitweise Operationen & Bitmasken: glossary/bit-manipulation.md
               - Mathematische Zahlenumkehr: glossary/math-number-reversal.md
               - Römische Zahlen & Ziffernsysteme: glossary/roman-numerals.md
@@ -105,6 +106,8 @@ nav:
               - Zyklische Permutationen: glossary/cyclic-permutations.md
           - System & Performance:
               - Flood Fill & Gitter-Traversierung: glossary/flood-fill.md
+              - Speicherschonende Generatoren: glossary/generator-expressions.md
+              - Constraint-Driven Design: glossary/constraint-driven-design.md
               - SciPy & Matrix-Vektor (SpMV): glossary/scipy-matrix-vector.md
               - Speicher & Garbage Collection: glossary/memory-management.md
       - LeetCode Lösungen:

@@ -72,8 +72,11 @@ Hocheffiziente Problemlösungen auf Byte-Ebene in extrem wenigen CPU-Zyklen.
 === "Konzepte & Datenstrukturen"
 
     - [Zustandsbasierter Dijkstra](glossary/state-space-dijkstra.md) – Kürzeste Pfade mit Historien, Zeichenfolgen und State-Space Reduction.
+    - [Constraint-Driven Design](glossary/constraint-driven-design.md) – Kleine Parametergrenzen als Architektur-Hinweis für DP und Bitmasken.
     - [CSR-Format (Compressed Sparse Row)](glossary/csr-format.md) – Flache, cache-optimierte 1D-Arrays für Graphen und Sparse-Matrizen.
     - [Landau-Symbole & Big-O Notation](glossary/o-notation.md) – Interaktives Wachstumsdiagramm und Komplexitätsanalyse von $\mathcal{O}(1)$ bis $\mathcal{O}(n!)$.
+    - [Ein-Pass durch algebraische Umformung](glossary/algebraic-one-pass.md) – Single-Pass Summenbildung $\mathcal{O}(n)$ statt doppelter Schleifen.
+    - [Speicherschonende Generatoren](glossary/generator-expressions.md) – Echter $\mathcal{O}(1)$-Speicherbedarf durch Lazy Evaluation.
     - [Fortgeschrittene Baum-Techniken](glossary/advanced-tree-techniques.md) – Lowest Common Ancestor (LCA), Binary Lifting, Euler-Tour und Fenwick-Bäume.
     - [Schiebefenster (Sliding Window)](glossary/sliding-window.md) – Dynamische Two-Pointer-Fenster und ASCII-Array-Optimierung.
     - [Speicher & Garbage Collection](glossary/memory-management.md) – Pointer-Overhead, Cache-Lines und Sprachvergleich (Python, Java, Rust, C++).
