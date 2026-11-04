@@ -22,5 +22,17 @@ jobs:
         run: |
           pip install mkdocs-material
           
+      - name: Build German Site (de)
+        run: mkdocs build -f mkdocs.de.yml -d site/de
+        
+      - name: Build English Site (en)
+        run: mkdocs build -f mkdocs.en.yml -d site/en
+        
+      - name: Copy Root Redirect
+        run: cp index.html site/index.html
+        
       - name: Deploy to GitHub Pages
-        run: mkdocs gh-deploy --force
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site

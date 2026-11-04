@@ -11,6 +11,20 @@ Hier werden alle neuen Algorithmen, Datenstrukturen, LeetCode-Lösungen, Securit
 
 ---
 
+## 04. November 2026
+
+### Internationalisierung & Mehrsprachigkeit (i18n)
+- **Mehrsprachige Architektur (Deutsch & Englisch):**  
+  Umstellung auf den offiziellen Material-for-MkDocs Multi-Site Standard. Der Algodex steht nun vollständig parallel auf Deutsch (`/de/`) und Englisch (`/en/`) zur Verfügung.
+- **Vollständig isolierte Suchindizes (Keine Treffer-Dopplungen):**  
+  Da Deutsch und Englisch als eigenständige Instanzen gebaut werden, hat jede Sprachversion ihren eigenen `search_index.json`. Wer auf der deutschen Seite sucht, erhält nur deutsche Treffer; auf der englischen nur englische.
+- **Nativer Language Selector im Header:**  
+  Über die `extra.alternate`-Einstellung im Material-Theme können Besucher oben rechts im Header blitzschnell zwischen Deutsch und Englisch umschalten.
+- **Intelligenter Root-Redirect (`index.html`):**  
+  Besucher der Hauptdomain werden anhand ihrer bevorzugten Browsersprache automatisch nach `/de/` oder `/en/` weitergeleitet.
+
+---
+
 ## 31. Oktober 2026
 
 ### Plattform-Architektur & UX-Relaunch

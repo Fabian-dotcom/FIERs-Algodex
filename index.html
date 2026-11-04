@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting to FIER's Algodex...</title>
+  <meta http-equiv="refresh" content="0; url=de/">
+  <script>
+    // Browser-Sprache erkennen: wenn Englisch bevorzugt, leite nach /en/ um, sonst /de/
+    var lang = (navigator.language || navigator.userLanguage || 'de').toLowerCase();
+    if (lang.startsWith('en')) {
+      window.location.replace('en/');
+    } else {
+      window.location.replace('de/');
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="de/">FIER's Algodex (Deutsch)</a> or <a href="en/">FIER's Algodex (English)</a>...</p>
+</body>
+</html>

@@ -1,15 +1,16 @@
 site_name: FIER's Algodex
-site_url: https://Fabian-dotcom.github.io/fiers-algodex/
+site_url: https://Fabian-dotcom.github.io/fiers-algodex/de/
 site_description: Persönliches Wiki & Nachschlagewerk für Algorithmen, Datenstrukturen, LeetCode-Lösungen und Web Security.
 site_author: Fabian (FIER)
 repo_url: https://github.com/Fabian-dotcom/fiers-algodex
 repo_name: fiers-algodex
 
+docs_dir: docs/de
+
 theme:
   name: material
   language: de
   palette:
-    # Automatisch hell basierend auf Systemeinstellung
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
@@ -17,8 +18,6 @@ theme:
       toggle:
         icon: material/brightness-7
         name: In den dunklen Modus wechseln
-
-    # Automatisch dunkel basierend auf Systemeinstellung
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: indigo
@@ -38,6 +37,15 @@ theme:
     - search.share
     - content.code.copy
     - content.code.annotate
+
+extra:
+  alternate:
+    - name: Deutsch
+      link: /fiers-algodex/de/
+      lang: de
+    - name: English
+      link: /fiers-algodex/en/
+      lang: en
 
 extra_css:
   - stylesheets/red-theme.css
