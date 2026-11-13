@@ -21,6 +21,8 @@ Diese Seite bietet eine strukturierte Übersicht aller Kernbegriffe, Datenstrukt
 | **Hash Map / Hash Set / Dictionary** | Assoziative Speicherung mit amortisiert $\mathcal{O}(1)$-Zugriff. | [Hash Map & Hash Set](glossary/hash-map.md) |
 | **Verkettete Liste (Linked List)** | Zeigerverkettete Knoten (`ListNode`), Dummy-Head-Pattern. | [Verkettete Liste](glossary/linked-list.md) |
 | **Min-Heap / Priority Queue** | Vorrangswarteschlange für schnellen Zugriff auf das Minimum in $\mathcal{O}(1)$ und Einfügen in $\mathcal{O}(\log n)$. | [Min-Heap & Sweep-Line](glossary/min-heap-sweep-line.md) |
+| **Two-Heap & Lazy Deletion** | Balancierte Max-/Min-Heaps für gleitende Mediane; ungültige Elemente werden per Häufigkeits-Tabelle markiert statt gesucht. | [Two-Heap & Lazy Deletion](glossary/two-heap-lazy-deletion.md) |
+| **Median-Kosten (L1-Norm)** | $\sum \|a_i - \text{median}\|$ in $\mathcal{O}(1)$ über mitgeführte Half-Summen. | [Two-Heap & Lazy Deletion](glossary/two-heap-lazy-deletion.md) |
 | **Fenwick-Baum (BIT / Binary Indexed Tree)** | Dynamische Präfixsummen und XOR-Aggregationen in $\mathcal{O}(\log n)$. | [Fortgeschrittene Baum-Techniken](glossary/advanced-tree-techniques.md) |
 
 ---
@@ -36,12 +38,27 @@ Diese Seite bietet eine strukturierte Übersicht aller Kernbegriffe, Datenstrukt
 | **Zustandsraum-Reduktion** | Minimierung von Pfad-Historien auf essenzielle Invarianten (`letztes_zeichen`, `zaehler`). | [Zustandsbasierter Dijkstra](glossary/state-space-dijkstra.md) |
 | **Flood Fill (Fluten)** | Zusammenhangskomponenten auf 2D-Gittern und Randeliminierung. | [Flood Fill & Gitter-Traversierung](glossary/flood-fill.md) |
 | **Schiebefenster (Sliding Window)** | Dynamische und feste Intervalle mit Two-Pointers in $\mathcal{O}(n)$. | [Schiebefenster](glossary/sliding-window.md) |
+| **Monotonic Stack & Kostenakkumulation** | Rückwärts-Sweep mit Monotonic Stack, inkrementellen Kosten und schrumpfendem Fenster für Subarray-Reparaturkosten. | [Monotonic Stack](glossary/monotonic-stack-cost-accumulation.md) |
+| **Disjoint Set Union (Union-Find)** | `find`/`union` mit Path Compression und Union by Size in fast $\mathcal{O}(1)$ ($\alpha(n)$) pro Operation. | [DSU / Union-Find](glossary/dsu-union-find.md) |
 | **Binäre Suche (Binary Search)** | Logarithmische Suche $\mathcal{O}(\log n)$ und Partitionierung zweier sortierter Arrays. | [Binäre Suche](glossary/binary-search.md) |
 | **Sweep-Line** | Ereignispunkt-Traversierung entlang einer Achse zur Intervallverarbeitung. | [Min-Heap & Sweep-Line](glossary/min-heap-sweep-line.md) |
+| **Sortierte Abfragen & Zwei-Zeiger** | Offline-Abfragen mit Original-Index sortieren und mit zwei Zeigern monoton mitsweepen. | [Sortierte Abfragen & Zwei-Zeiger](glossary/sorted-queries-two-pointer.md) |
+| **Event-Driven Simulation** | Frei-/Beschäftigt-Heaps und Zeitsprünge statt Sekunden-Tick in Scheduling-Problemen. | [Event-Driven Simulation](glossary/event-driven-simulation.md) |
+| **Python Performance-Optimierungen** | Zero-Copy-Indexing statt Slicing, String-Allocation-Overhead und Built-in C-Speed. | [Python Performance](glossary/python-performance-optimization.md) |
+| **Inversionszählung (Fenwick)** | Anzahl der Swaps beim Bubble-Sort-Sortieren in $\mathcal{O}(n \log n)$. | [Fortgeschrittene Baum-Techniken](glossary/advanced-tree-techniques.md) |
 | **PageRank** | Zentralitätsbewertung im gerichteten Graphen via Random Walk und Power Iteration. | [PageRank](glossary/pagerank.md) |
 | **Graph Neural Networks (GNN)** | Deep Learning auf Graphen durch Message Passing und Nachbarschafts-Aggregation. | [Graph Neural Networks](glossary/gnn.md) |
 | **SciPy & Matrix-Vektor (SpMV)** | Dünnbesetzte Multiplikationen und wissenschaftliche Datenformate (CSR, CSC, COO). | [SciPy & Matrix-Vektor](glossary/scipy-matrix-vector.md) |
 | **Speicher & Garbage Collection** | Cache-Lines, Pointer-Overhead, Referenzzählung und Stop-the-World GC. | [Speicherverwaltung & GC](glossary/memory-management.md) |
+
+---
+
+## Sprachen & Migration (Python → Rust)
+
+| Begriff / Stichworte | Erklärung | Dokumentation |
+| :--- | :--- | :--- |
+| **Python ↔ Rust Übersetzung** | Sammlung-/Iterator-/Fehlerbehandlungs-Entsprechungen: `deque` → `VecDeque`, `heapq` → `BinaryHeap`, Exceptions → `Result`. | [Sprachen & Migration](glossary/languages-rust.md) |
+| **Ownership & Borrowing** | Eindeutiger Besitzer pro Wert; `&T` liest, `&mut T` schreibt – deterministic statt GC. | [Sprachen & Migration](glossary/languages-rust.md) |
 
 ---
 

@@ -82,6 +82,8 @@ nav:
       - Startseite: index.md
       - Stichwort-Referenz: references.md
       - Changelog: changelog.md
+      - Sprachen & Migration (Python → Rust):
+          - Python ↔ Rust Übersicht: glossary/languages-rust.md
       - Lernpfade:
           - Graphen & Bäume: roadmaps/graphs.md
           - Arrays & Strings: roadmaps/arrays-strings.md
@@ -94,6 +96,7 @@ nav:
               - CSR-Format: glossary/csr-format.md
               - Graph-Traversierung (BFS & DFS): glossary/traversierung-bfs-dfs.md
               - Topologische Sortierung: glossary/topologische-sortierung.md
+              - Disjoint Set Union (Union-Find): glossary/dsu-union-find.md
               - Zustandsbasierter Dijkstra: glossary/state-space-dijkstra.md
               - Fortgeschrittene Baum-Techniken: glossary/advanced-tree-techniques.md
               - PageRank: glossary/pagerank.md
@@ -102,8 +105,13 @@ nav:
               - Hash Map & Hash Set: glossary/hash-map.md
               - Verkettete Liste: glossary/linked-list.md
               - Schiebefenster (Sliding Window): glossary/sliding-window.md
+              - Monotonic Stack mit Kostenakkumulation: glossary/monotonic-stack-cost-accumulation.md
               - Binäre Suche: glossary/binary-search.md
               - Min-Heap & Sweep-Line: glossary/min-heap-sweep-line.md
+              - Two-Heap & Lazy Deletion (Median): glossary/two-heap-lazy-deletion.md
+              - Sortierte Abfragen & Zwei-Zeiger: glossary/sorted-queries-two-pointer.md
+              - Event-Driven Simulation: glossary/event-driven-simulation.md
+              - Python Performance-Optimierungen: glossary/python-performance-optimization.md
           - Diskrete Mathematik & Bits:
               - Landau-Symbole (Big-O): glossary/o-notation.md
               - Ein-Pass durch algebraische Umformung: glossary/algebraic-one-pass.md
@@ -137,6 +145,16 @@ nav:
           - LeetCode 3942 (Minimum Operations to Sort a Permutation): solutions/leetcode-3942.md
           - LeetCode 3963 (Create Grid With Exactly One Path): solutions/leetcode-3963.md
           - LeetCode 3970 (Shortest Path With At Most K Consecutive Identical Characters): solutions/leetcode-3970.md
+          - LeetCode 453 (Minimum Moves to Equal Array Elements): solutions/leetcode-453.md
+          - LeetCode 1882 (Process Tasks Using Servers): solutions/leetcode-1882.md
+          - LeetCode 2747 (Count Zero Request Servers): solutions/leetcode-2747.md
+          - LeetCode 3505 (Minimum Operations to Make Elements Within K Subarrays Equal): solutions/leetcode-3505.md
+          - LeetCode 3736 (Minimum Moves to Equal Array Elements III): solutions/leetcode-3736.md
+          - Weekly Contest 526 (Q1–Q4):
+              - Q1 (Minimum Value of Merged Integers): solutions/leetcode-w526-q1.md
+              - Q2 (Minimize the Maximum Value of GCD-Connected Array): solutions/leetcode-w526-q2.md
+              - Q3 (Minimum Operations to Sort With Locked Indices): solutions/leetcode-w526-q3.md
+              - Q4 (Minimum Cost Path With Even XOR Parity): solutions/leetcode-w526-q4.md
       - Templates:
           - LeetCode Vorlage: templates/leetcode-template.md
 

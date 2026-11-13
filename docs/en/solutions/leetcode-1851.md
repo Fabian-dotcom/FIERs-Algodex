@@ -16,7 +16,7 @@ tags:
 - **Plattform:** [LeetCode #1851](https://leetcode.com/problems/minimum-interval-to-include-each-query/)
 - **Schwierigkeit:** Hard
 - **Kategorien:** Array, [Binary Search](../glossary/binary-search.md), Heap ([Priority Queue](../glossary/min-heap-sweep-line.md)), Sweep Line, Sorting
-- **Verwandte Konzepte:** [Min-Heap & Sweep-Line für Intervalle](../glossary/min-heap-sweep-line.md)
+- **Verwandte Konzepte:** [Min-Heap & Sweep-Line für Intervalle](../glossary/min-heap-sweep-line.md) | [Sortierte Abfragen mit Zwei-Zeiger-Fenster](../glossary/sorted-queries-two-pointer.md) | Verwandte Aufgabe: [LeetCode 2747](leetcode-2747.md)
 
 ---
 

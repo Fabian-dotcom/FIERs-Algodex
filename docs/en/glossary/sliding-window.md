@@ -65,6 +65,34 @@ Ein Fenster fester Breite $k$ wandert über das Array. Beim Vorrücken wird das 
 
 $$\text{Summe}_{\text{neu}} = \text{Summe}_{\text{alt}} + \text{arr}[\text{end}] - \text{arr}[\text{end} - k]$$
 
+## Reference Implementation (Rust)
+
+The same dynamic-size window in Rust:
+
+```rust
+fn longest_unique_substring(s: &str) -> usize {
+    let mut last = [usize::MAX; 128];       // ASCII table instead of HashMap
+    let bytes = s.as_bytes();
+    let (mut start, mut best) = (0usize, 0usize);
+
+    for (end, &b) in bytes.iter().enumerate() {
+        if last[b as usize] != usize::MAX && last[b as usize] >= start {
+            // Never move the start pointer left
+            start = last[b as usize] + 1;
+        }
+        last[b as usize] = end;
+        best = best.max(end - start + 1);
+    }
+    best
+}
+```
+
+### Rust Notes on the Sliding Window
+
+- **`[usize::MAX; 128]`:** Fixed-size array literal – the direct translation of Python's `[-1] * 128`. In Rust, `usize::MAX` is the usual "unset" marker, because `-1` does not exist on unsigned types.
+- **`best.max(end - start + 1)`:** Rust's method idiom for `max(best, ...)`.
+- **No pointer-overflow worries:** `end - start + 1` on `usize` cannot underflow since `end >= start` is guaranteed – the compiler checks the types at compile time.
+
 ---
 
 ## Optimierungen für Coding-Wettbewerbe

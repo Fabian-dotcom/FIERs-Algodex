@@ -11,6 +11,49 @@ Hier werden alle neuen Algorithmen, Datenstrukturen, LeetCode-Lösungen, Securit
 
 ---
 
+## 14. November 2026
+
+### Neuer Bereich: Sprachen & Migration (Python → Rust)
+- **Neuer Glossar-Bereich [Sprachen & Migration](glossary/languages-rust.md):**  
+  Ausführliche Python ↔ Rust Übersetzungstabelle (Collections, Iteratoren, Fehlerbehandlung), die wichtigsten Stolpersteine am Anfang (Ownership, `Option`, Integer-Typen) und eine gestufte Rust-Lern-Roadmap.
+- **Neue Strategie:** Von nun an dokumentiert jedes neue Glossar-Kapitel die Referenz in **beiden** Sprachen – Python zuerst, plus Rust-Variante mit sprachspezifischen „Rust-Notizen".
+- **Retro-Aktiv ergänzt:** [Schiebefenster](glossary/sliding-window.md) um die Rust-Referenzimplementierung erweitert.
+
+### Neue Glossar-Einträge (Core Algodex)
+- **[Monotonic Stack with Cost Accumulation (Backward Sliding Window)](glossary/monotonic-stack-cost-accumulation.md):**
+  Rückwärts-Sweep für Subarray-Reparaturkosten (z. B. Non-Decreasing): Monotonic Stack verwaltet lokale Spitzen/Täler, Kosten werden inkrementell angepasst, ein zweiter Zeiger `j` schrumpft das Fenster beim Budget `k`. $
+\mathcal{O}(n)$ Zeit, $
+\mathcal{O}(n)$ Speicher – in Python **und** Rust.
+- **[Disjoint Set Union (DSU / Union-Find)](glossary/dsu-union-find.md):**
+  Dynamic Connectivity mit `find` & `union`, Path Compression und Union by Size in fast $
+\mathcal{O}(1)$ ($
+\alpha(n)$) pro Operation – Kruskal, Insel-Cluster, Online-Verbundenheits-Anfragen. Ebenfalls doppelt dokumentiert (Python & Rust, inkl. `&mut self`-Lektion).
+- **Stichwort-Referenz, Changelog und beide MkDocs-Navigationen (`mkdocs.yml`, `mkdocs.en.yml`) erweitert.**
+
+---
+
+## 07. November 2026
+
+### Fortgeschrittene Heap- & Simulationsmuster (Core Algodex)
+- **[Two-Heap mit Lazy Deletion & Median-Kosten (L1-Norm)](glossary/two-heap-lazy-deletion.md):**
+  Balancierte Max-/Min-Heaps für gleitende Mediane; herausgefallene Elemente werden über eine Häufigkeits-Tabelle markiert statt teuer gesucht, und die $L_1$-Abstandssumme wird in $\mathcal{O}(1)$ über mitgeführte Half-Summen beantwortet.
+- **[Sortierte Abfragen mit Zwei-Zeiger-Fenster (Event-Tracking)](glossary/sorted-queries-two-pointer.md):**
+  Abfragen als `(wert, original_index)`-Tupel sortieren und monoton mit dem zeitsortierten Logbuch mitsweepen — keine redundanten Suchen, optimales $\mathcal{O}(n \log n + k \log k)$.
+- **[Event-Driven Simulation mit zwei Priority Queues (Zeitsprünge)](glossary/event-driven-simulation.md):**
+  Frei-Heap (Gewicht, dann Index) und Beschäftigt-Heap (Fertigstellungszeit) modellieren durchgehendes Scheduling; `current_time = busy_servers[0][0]` springt direkt zum nächsten Ereignis statt sekundenweise zu ticken.
+- **Stichwort-Referenz, Changelog und beide MkDocs-Navigationen (`mkdocs.yml`, `mkdocs.en.yml`) entsprechend erweitert.**
+
+### Neue dokumentierte LeetCode-Lösungen
+- **[LC 1882 – Process Tasks Using Servers](solutions/leetcode-1882.md):** Zwei Heaps + Zeitsprung — die Referenzimplementierung des [Event-Driven-Simulation-Patterns](glossary/event-driven-simulation.md).
+- **[LC 2747 – Count Zero Request Servers](solutions/leetcode-2747.md):** Sortierte Abfragen mit zwei Zeigern + Häufigkeits-Tabelle ([Pattern-Referenz](glossary/sorted-queries-two-pointer.md)).
+- **[LC 3505 – Minimum Operations (K Subarrays Equal)](solutions/leetcode-3505.md):** Two-Heap mit Lazy Deletion für Fenstermediane + speicheroptimierte Bottom-Up-DP ([Pattern-Referenz](glossary/two-heap-lazy-deletion.md)).
+- **[LC 453](solutions/leetcode-453.md) & [LC 3736](solutions/leetcode-3736.md) – Minimum Moves I/III:** Geschlossene Formeln $\sum - n \cdot \min$ bzw. $n \cdot \max - \sum$ als Perspektiv-Inversion.
+- **[Weekly Contest 526 Q1–Q4](solutions/leetcode-w526-q1.md):** (Länge, String)-Ordnung, kleinster Primfaktor-Kette, Inversionen + Pflicht-Grenzen via Fenwick, Paritätszerlegung im iterativen Tree-DP.
+- **Neues Glossar-Kapitel [Python Performance-Optimierungen](glossary/python-performance-optimization.md):** Zero-Copy Indexing vs. Slicing, String-Allocation Overhead, Generator-Expressions und Built-in C-Speed.
+- **Cross-Links:** LC 1851 ↔ 2747 und LC 3841 ↔ 1882 sind jetzt gegenseitig verknüpft.
+
+---
+
 ## 04. November 2026
 
 ### Internationalisierung & Mehrsprachigkeit (i18n)

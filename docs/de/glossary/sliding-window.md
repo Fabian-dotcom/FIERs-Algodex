@@ -76,6 +76,36 @@ $$\text{Summe}_{\text{neu}} = \text{Summe}_{\text{alt}} + \text{arr}[\text{end}]
 
 ---
 
+## Referenzimplementierung (Rust)
+
+Das gleiche Fenster mit dynamischer Größe in Rust:
+
+```rust
+fn longest_unique_substring(s: &str) -> usize {
+    let mut last = [-1usize; 128];          // ASCII-Tabelle statt HashMap
+    let bytes = s.as_bytes();
+    let (mut start, mut best) = (0usize, 0usize);
+
+    for (end, &b) in bytes.iter().enumerate() {
+        if last[b as usize] != usize::MAX && last[b as usize] >= start {
+            // Start niemals nach links zurücksetzen
+            start = last[b as usize] + 1;
+        }
+        last[b as usize] = end;
+        best = best.max(end - start + 1);
+    }
+    best
+}
+```
+
+### Rust-Notizen zum Sliding Window
+
+- **`[-1usize; 128]`:** Array-Literal mit fixer Größe – Pythons `[-1] * 128` direkt übersetzt. In Rust ist `usize::MAX` der übliche „ungesetzt“-Wert, weil `-1` bei vorzeichenlosen Typen nicht existiert.
+- **`best.max(end - start + 1)`:** Rusts Methoden-Idiom für `max(best, ...)`.
+- **Keine Overflow-Sorgen bei Zeigern:** `end - start + 1` auf `usize` kann nicht unterlaufen, weil `end >= start` garantiert ist – der Compiler prüft die Typen zur Compile-Zeit.
+
+---
+
 ## Komplexität
 
 | Dimension | Komplexität |

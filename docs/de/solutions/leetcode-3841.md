@@ -18,7 +18,7 @@ tags:
 - **Plattform:** [LeetCode #3841](https://leetcode.com/problems/palindromic-path-queries-in-a-tree/)
 - **Schwierigkeit:** Hard
 - **Kategorien:** Tree, Graph, Euler Tour, [Binary Lifting](../glossary/advanced-tree-techniques.md), LCA, Fenwick Tree, Bit Manipulation
-- **Verwandte Konzepte:** [Fortgeschrittene Baum-Techniken](../glossary/advanced-tree-techniques.md) | [Bitweise Operationen](../glossary/bit-manipulation.md) | [Adjazenzliste](../glossary/adjazenzliste.md)
+- **Verwandte Konzepte:** [Fortgeschrittene Baum-Techniken](../glossary/advanced-tree-techniques.md) | [Bitweise Operationen](../glossary/bit-manipulation.md) | [Adjazenzliste](../glossary/adjazenzliste.md) | Verwandte Aufgabe: [LeetCode 1882](leetcode-1882.md)
 
 ---
 
