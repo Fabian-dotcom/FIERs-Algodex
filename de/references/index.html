@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -512,6 +512,17 @@
     <span class="md-ellipsis">
       
         Algorithmen &amp; Traversierung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprachen-migration-python-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprachen &amp; Migration (Python → Rust)
       
     </span>
   </a>
@@ -3073,6 +3084,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sprachen-migration-python-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprachen &amp; Migration (Python → Rust)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#baum-spezialtechniken" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3194,6 +3216,16 @@
 <td style="text-align: left;"><a href="../glossary/min-heap-sweep-line/">Min-Heap &amp; Sweep-Line</a></td>
 </tr>
 <tr>
+<td style="text-align: left;"><strong>Two-Heap &amp; Lazy Deletion</strong></td>
+<td style="text-align: left;">Balancierte Max-/Min-Heaps für gleitende Mediane; ungültige Elemente werden per Häufigkeits-Tabelle markiert statt gesucht.</td>
+<td style="text-align: left;"><a href="../glossary/two-heap-lazy-deletion/">Two-Heap &amp; Lazy Deletion</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Median-Kosten (L1-Norm)</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(\sum \|a_i - \text{median}\|\)</span> in <span class="arithmatex">\(\mathcal{O}(1)\)</span> über mitgeführte Half-Summen.</td>
+<td style="text-align: left;"><a href="../glossary/two-heap-lazy-deletion/">Two-Heap &amp; Lazy Deletion</a></td>
+</tr>
+<tr>
 <td style="text-align: left;"><strong>Fenwick-Baum (BIT / Binary Indexed Tree)</strong></td>
 <td style="text-align: left;">Dynamische Präfixsummen und XOR-Aggregationen in <span class="arithmatex">\(\mathcal{O}(\log n)\)</span>.</td>
 <td style="text-align: left;"><a href="../glossary/advanced-tree-techniques/">Fortgeschrittene Baum-Techniken</a></td>
@@ -3247,6 +3279,16 @@
 <td style="text-align: left;"><a href="../glossary/sliding-window/">Schiebefenster</a></td>
 </tr>
 <tr>
+<td style="text-align: left;"><strong>Monotonic Stack &amp; Kostenakkumulation</strong></td>
+<td style="text-align: left;">Rückwärts-Sweep mit Monotonic Stack, inkrementellen Kosten und schrumpfendem Fenster für Subarray-Reparaturkosten.</td>
+<td style="text-align: left;"><a href="../glossary/monotonic-stack-cost-accumulation/">Monotonic Stack</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Disjoint Set Union (Union-Find)</strong></td>
+<td style="text-align: left;"><code>find</code>/<code>union</code> mit Path Compression und Union by Size in fast <span class="arithmatex">\(\mathcal{O}(1)\)</span> (<span class="arithmatex">\(\alpha(n)\)</span>) pro Operation.</td>
+<td style="text-align: left;"><a href="../glossary/dsu-union-find/">DSU / Union-Find</a></td>
+</tr>
+<tr>
 <td style="text-align: left;"><strong>Binäre Suche (Binary Search)</strong></td>
 <td style="text-align: left;">Logarithmische Suche <span class="arithmatex">\(\mathcal{O}(\log n)\)</span> und Partitionierung zweier sortierter Arrays.</td>
 <td style="text-align: left;"><a href="../glossary/binary-search/">Binäre Suche</a></td>
@@ -3255,6 +3297,26 @@
 <td style="text-align: left;"><strong>Sweep-Line</strong></td>
 <td style="text-align: left;">Ereignispunkt-Traversierung entlang einer Achse zur Intervallverarbeitung.</td>
 <td style="text-align: left;"><a href="../glossary/min-heap-sweep-line/">Min-Heap &amp; Sweep-Line</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sortierte Abfragen &amp; Zwei-Zeiger</strong></td>
+<td style="text-align: left;">Offline-Abfragen mit Original-Index sortieren und mit zwei Zeigern monoton mitsweepen.</td>
+<td style="text-align: left;"><a href="../glossary/sorted-queries-two-pointer/">Sortierte Abfragen &amp; Zwei-Zeiger</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Event-Driven Simulation</strong></td>
+<td style="text-align: left;">Frei-/Beschäftigt-Heaps und Zeitsprünge statt Sekunden-Tick in Scheduling-Problemen.</td>
+<td style="text-align: left;"><a href="../glossary/event-driven-simulation/">Event-Driven Simulation</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Python Performance-Optimierungen</strong></td>
+<td style="text-align: left;">Zero-Copy-Indexing statt Slicing, String-Allocation-Overhead und Built-in C-Speed.</td>
+<td style="text-align: left;"><a href="../glossary/python-performance-optimization/">Python Performance</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Inversionszählung (Fenwick)</strong></td>
+<td style="text-align: left;">Anzahl der Swaps beim Bubble-Sort-Sortieren in <span class="arithmatex">\(\mathcal{O}(n \log n)\)</span>.</td>
+<td style="text-align: left;"><a href="../glossary/advanced-tree-techniques/">Fortgeschrittene Baum-Techniken</a></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>PageRank</strong></td>
@@ -3275,6 +3337,29 @@
 <td style="text-align: left;"><strong>Speicher &amp; Garbage Collection</strong></td>
 <td style="text-align: left;">Cache-Lines, Pointer-Overhead, Referenzzählung und Stop-the-World GC.</td>
 <td style="text-align: left;"><a href="../glossary/memory-management/">Speicherverwaltung &amp; GC</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sprachen-migration-python-rust">Sprachen &amp; Migration (Python → Rust)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Begriff / Stichworte</th>
+<th style="text-align: left;">Erklärung</th>
+<th style="text-align: left;">Dokumentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Python ↔ Rust Übersetzung</strong></td>
+<td style="text-align: left;">Sammlung-/Iterator-/Fehlerbehandlungs-Entsprechungen: <code>deque</code> → <code>VecDeque</code>, <code>heapq</code> → <code>BinaryHeap</code>, Exceptions → <code>Result</code>.</td>
+<td style="text-align: left;"><a href="../glossary/languages-rust/">Sprachen &amp; Migration</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ownership &amp; Borrowing</strong></td>
+<td style="text-align: left;">Eindeutiger Besitzer pro Wert; <code>&amp;T</code> liest, <code>&amp;mut T</code> schreibt – deterministic statt GC.</td>
+<td style="text-align: left;"><a href="../glossary/languages-rust/">Sprachen &amp; Migration</a></td>
 </tr>
 </tbody>
 </table>
@@ -3513,7 +3598,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "search.share", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       
